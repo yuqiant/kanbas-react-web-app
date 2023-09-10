@@ -68,6 +68,7 @@
         }
 
         #secondColumn {
+            width: 200px;
             display: none;
             /* Initially hide the second column */
         }
@@ -87,7 +88,7 @@
 <body>
     <table>
         <tr>
-            <td id="firstColumn" style="width: 150px;">
+            <td id="firstColumn">
                 <ul>
                     <li><a href="#">Account</a></li>
                     <li><a href="#">Dashboard</a></li>
@@ -100,7 +101,7 @@
                     <li><a href="#">Help</a></li>
                 </ul>
             </td>
-            <td id="secondColumn" style="width: 150px;">
+            <td id="secondColumn">
                 <ul>
                     <li><a href="#" onclick="showThirdColumn()">Home</a></li>
                     <li><a href="#">Modules</a></li>
@@ -122,7 +123,7 @@
                     <li><a href="#">Settings</a></li>
                 </ul>
             </td>
-            <td id="thirdColumn" style="width: 250px;">
+            <td id="thirdColumn">
                 <button type="button">Collapse All</button>
                 <button type="button">View Progress</button>
 
@@ -186,32 +187,8 @@
 
 
             </td>
-            <td id="fourthColumn" style="width: 250px;">
-
-
-                <h2>Course Status</h2>
-                <button type="button">Unpublish</button>
-                <button type="button">Published</button>
-                <li><a href="#">Import Existing Content</li>
-                <li><a href="#">Import From Commons</li>
-                <li><a href="#">Choose Home Page</li>
-                <li><a href="#">View Course Stream</li>
-                <li><a href="#">New Announcement</li>
-                <li><a href="#">New Analytics</li>
-                <li><a href="#">View Course Notifications</a></li>
-
-
-                <h2>Coming Up</h2>
-                <li><a href="#">View Calendar
-                        <ul>
-                            <li>Lecture CS4550.12631.202410 Sep 7 at 11:45am</li>
-                            <li>Lecture CS4550.12631.202410 Sep 11 at 11:45am</li>
-                            <li>CS5610 06 SP23 Lecture Sep 11 at 6pm</li>
-                        </ul>
-                </li>
-
-
-
+            <td id="fourthColumn">
+                4 Column Content
             </td>
         </tr>
     </table>
@@ -224,9 +201,7 @@
 
         function showThirdColumn() {
             const thirdColumn = document.getElementById("thirdColumn");
-            const fourthColumn = document.getElementById("fourthColumn");
             thirdColumn.style.display = "table-cell";
-            fourthColumn.style.display = "table-cell";
         }
     </script>
 </body>
