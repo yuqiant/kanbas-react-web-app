@@ -27,7 +27,7 @@
                 <ul>
                     <li><a href="#">Account</a></li>
                     <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Course</a></li>
+                    <li><a href="#" onclick="showSecondColumn()">Course</a></li>
                     <li><a href="#">Calendar</a></li>
                     <li><a href="#">Inbox</a></li>
                     <li><a href="#">History</a></li>
@@ -38,13 +38,13 @@
             </td>
             <td id="secondColumn" style="width: 150px;">
                 <ul>
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#" onclick="showThirdColumn()">Home</a></li>
                     <li><a href="#">Modules</a></li>
                     <li><a href="#">Piazza</a></li>
                     <li><a href="#">Zoom Meetings</a></li>
                     <li><a href="#">Assignments</a></li>
                     <li><a href="#">Quizzes</a></li>
-                    <li><a href="grades.html">Grades</a></li>
+                    <li><a href="#">Grades</a></li>
                     <li><a href="#">People</a></li>
                     <li><a href="#">Panopto Video</a></li>
                     <li><a href="#">Discussions</a></li>
@@ -55,8 +55,59 @@
                     <li><a href="#">Outcomes</a></li>
                     <li><a href="#">Collaborations</a></li>
                     <li><a href="#">Syllabus</a></li>
-                    <li><a href="coursesetting.html">Settings</a></li>
+                    <li><a href="#">Settings</a></li>
                 </ul>
+            </td>
+            <td id="thirdColumn" style="width: 250px;">
+                <h3>Course Details</h3>
+
+                <h4>Image:</h4>
+                <form action="/upload_endpoint" method="post" enctype="multipart/form-data">
+                    <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
+                    <input type="submit" value="Upload Image">
+                </form>
+
+                <h4>Name:</h4>
+                CS4550 12631 Web Developoment SEC 01 Fall 2023 [BOS-1-TR]
+
+
+
+
+
+
+
+
+
+
+
+
+            </td>
+            <td id="fourthColumn" style="width: 250px;">
+
+
+                <h2>Course Status</h2>
+                <button type="button">Unpublish</button>
+                <button type="button">Published</button>
+                <li><a href="#">Import Existing Content</li>
+                <li><a href="#">Import From Commons</li>
+                <li><a href="#">Choose Home Page</li>
+                <li><a href="#">View Course Stream</li>
+                <li><a href="#">New Announcement</li>
+                <li><a href="#">New Analytics</li>
+                <li><a href="#">View Course Notifications</a></li>
+
+
+                <h2>Coming Up</h2>
+                <li><a href="#">View Calendar
+                        <ul>
+                            <li>Lecture CS4550.12631.202410 Sep 7 at 11:45am</li>
+                            <li>Lecture CS4550.12631.202410 Sep 11 at 11:45am</li>
+                            <li>CS5610 06 SP23 Lecture Sep 11 at 6pm</li>
+                        </ul>
+                </li>
+
+
+
             </td>
         </tr>
     </table>
