@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Interaction</title>
+    <style>
+        table {
+            width: 100%;
+
+        }
+
+        td {
+            width: 50%;
+            border: 1px solid transparent;
+            padding: 20px;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td id="firstColumn" style="width: 150px;">
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#" onclick="showSecondColumn()">Course</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+            <td id="secondColumn" style="width: 150px;">
+                <ul>
+                    <li><a href="#" onclick="showThirdColumn()">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="#">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </td>
+            <td id="thirdColumn" style="width: 250px;">
+                <form id="text-fields">
+                    <input id="text-fields-assginment" placeholder="Search for Assignments" /><br />
+                </form>
+                <button type="button">Group</button>
+                <button type="button">Assignment</button>
+                <select id="select-one">
+                    <option value="ALL">Edit Assignment Date</option>
+                </select>
+                <h2>ASSIGNMENT 40% of Total
+                    <select id="select-one">
+                        <option value="ALL">Edit</option>
+                        <option value="ALL">Speed Grader</option>
+                        <option value="ALL">Duplicate</option>
+                        <option value="ALL">Delete</option>
+                        <option value="ALL">Move To...</option>
+                        <option value="ALL">Send To...</option>
+                        <option value="ALL">Copy To...</option>
+                        <option value="ALL">Share to Commons</option>
+                    </select>
+                </h2>
+
+                <ul>
+                    <li><a href="#">A1 - ENV + HTML</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="#">A2 - CSS + BOOTSTRAP</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="#">A3 - JS + REACT</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="#">A4 - STATE + REDUX</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="#">A5 - NODE + SESSION</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="#">A6 - MONGO + MOONGOOSE</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                </ul>
+
+                <h2>ASSIGNMENT 40% of Total</h2>
+
+                <ul>
+                    <li><a href="#">A1 - ENV + HTML</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="#">A2 - CSS + BOOTSTRAP</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="#">A3 - JS + REACT</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="#">A4 - STATE + REDUX</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="#">A5 - NODE + SESSION</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="#">A6 - MONGO + MOONGOOSE</a></li>
+                    <div><a href="#">Multiple Modules</a> | Not available yet</div>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+
+            </td>
+
+        </tr>
+    </table>
+
+</body>
+
+</html>

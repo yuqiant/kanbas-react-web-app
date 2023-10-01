@@ -1,0 +1,101 @@
+<!-- 
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    
+<ul>
+    <li><a href="#">Account</a></li>
+    <li><a href="#">Dashboard</a></li>
+    <li><a href="#">Course</a></li>
+    <li><a href="#">Calendar</a></li>
+    <li><a href="#">Inbox</a></li>
+    <li><a href="#">History</a></li>
+    <li><a href="#">Studio</a></li>
+    <li><a href="#">Commons</a></li>
+    <li><a href="#">Help</a></li>
+</ul>
+
+<table>
+    <tr>
+        <td>
+            <ul>
+                <li>First</li>
+                <li>List</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Second</li>
+                <li>List</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+</body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Interaction</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 50%;
+            border: 1px solid black;
+            padding: 20px;
+            vertical-align: top;
+        }
+
+        #secondColumn {
+            display: none;
+            /* Initially hide the second column */
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td id="firstColumn">
+                <ul>
+                    <li><a href="#" onclick="showSecondColumn()">Option 1</a></li>
+                    <li><a href="#" onclick="showSecondColumn()">Option 2</a></li>
+                    <li><a href="#" onclick="showSecondColumn()">Option 3</a></li>
+                </ul>
+            </td>
+            <td id="secondColumn">
+                Second Column Content
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function showSecondColumn() {
+            const secondColumn = document.getElementById("secondColumn");
+            secondColumn.style.display = "table-cell"; // Change the display style to show the second column
+        }
+    </script>
+</body>
+
+</html>

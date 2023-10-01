@@ -1,0 +1,152 @@
+<!-- 
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    
+<ul>
+    <li><a href="#">Account</a></li>
+    <li><a href="#">Dashboard</a></li>
+    <li><a href="#">Course</a></li>
+    <li><a href="#">Calendar</a></li>
+    <li><a href="#">Inbox</a></li>
+    <li><a href="#">History</a></li>
+    <li><a href="#">Studio</a></li>
+    <li><a href="#">Commons</a></li>
+    <li><a href="#">Help</a></li>
+</ul>
+
+<table>
+    <tr>
+        <td>
+            <ul>
+                <li>First</li>
+                <li>List</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Second</li>
+                <li>List</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+</body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Interaction</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 50%;
+            border: 1px solid transparent;
+            padding: 20px;
+            vertical-align: top;
+        }
+
+        #secondColumn {
+            display: none;
+            /* Initially hide the second column */
+        }
+
+        #thirdColumn {
+            display: none;
+            /* Initially hide the second column */
+        }
+
+        #fourthColumn {
+            display: none;
+            /* Initially hide the second column */
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td id="firstColumn">
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#" onclick="showSecondColumn()">Course</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+            <td id="secondColumn">
+                <ul>
+                    <li><a href="#" onclick="showthirdColumn()">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="#">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </td>
+            <td id="thirdColumn">
+        <tr valign="baseline">
+            <td>Collapse</td>
+            <td>View Progress</td>
+            <td>Collapse</td>
+        </tr>
+
+        </td>
+        <td id="fourthColumn">
+            4 Column Content
+        </td>
+        </tr>
+    </table>
+
+    <script>
+        function showSecondColumn() {
+            const secondColumn = document.getElementById("secondColumn");
+            secondColumn.style.display = "table-cell"; // Change the display style to show the second column
+        }
+
+        function showthirdColumn() {
+            const thirdColumn = document.getElementById("thirdColumn");
+            thirdColumn.style.display = "table-cell";
+        }
+    </script>
+</body>
+
+</html>
