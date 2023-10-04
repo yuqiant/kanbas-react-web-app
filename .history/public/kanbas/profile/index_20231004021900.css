@@ -1,0 +1,20 @@
+.circle-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    /* Adjust the circle size as needed */
+    height: 50px;
+    /* Adjust the circle size as needed */
+    background-color: gray;
+    /* Set the background color to gray */
+    border-radius: 50%;
+    /* Create a circle using border-radius */
+}
+
+.circle-icon i {
+    color: white;
+    /* Set the icon color to white */
+    font-size: 24px;
+    /* Adjust the icon size as needed */
+}

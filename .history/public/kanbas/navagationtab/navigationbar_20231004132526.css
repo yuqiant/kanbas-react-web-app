@@ -1,0 +1,17 @@
+.flex-container {
+    display: flex;
+    height: 100%;
+}
+
+/* 左边列 */
+.left-column {
+    flex: 1;
+    /* 占据可用空间的一部分 */
+    padding: 20px;
+    width: 80px;
+    /* Adjust sidebar width as needed (between 75 and 85 pixels) */
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}

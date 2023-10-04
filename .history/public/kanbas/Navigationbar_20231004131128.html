@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        /* 创建一个包含左边和右边部分的 Flex 容器 */
+        .flex-container {
+            display: flex;
+        }
+
+        /* 左边列 */
+        .left-column {
+            flex: 1;
+            /* 占据可用空间的一部分 */
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        /* 右边部分分为上下两部分，使用嵌套的 Flex 容器 */
+        .right-column {
+            flex: 2;
+            /* 占据可用空间的两部分 */
+            display: flex;
+            flex-direction: column;
+            /* 垂直方向排列 */
+        }
+
+        /* 右上部分 */
+        .right-top {
+            background-color: lightgreen;
+            padding: 20px;
+        }
+
+        /* 右下部分分为三竖着的部分 */
+        .right-bottom {
+            display: flex;
+            flex-direction: row;
+            /* 垂直方向排列 */
+            flex: 1;
+            /* 均分可用空间 */
+        }
+
+        /* 每个竖着的部分 */
+        .right-bottom-item {
+            flex: 1;
+            /* 均分可用空间 */
+            background-color: lightcoral;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="left-column">
+            <!-- 左边内容 -->
+            <h1>Left Column</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="right-column">
+            <!-- 右边内容 -->
+            <div class="right-top">
+                <!-- 右上部分 -->
+                <h2>Right Top</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="right-bottom">
+                <!-- 右下部分分为三竖着的部分 -->
+                <div class="right-bottom-item">
+                    <!-- 第一个竖着的部分 -->
+                    <h3>Item 1</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="right-bottom-item">
+                    <!-- 第二个竖着的部分 -->
+                    <h3>Item 2</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="right-bottom-item">
+                    <!-- 第三个竖着的部分 -->
+                    <h3>Item 3</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

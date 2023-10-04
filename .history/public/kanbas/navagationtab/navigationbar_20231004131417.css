@@ -1,0 +1,43 @@
+.flex-container {
+    display: flex;
+}
+
+/* 左边列 */
+.left-column {
+    flex: 1;
+    /* 占据可用空间的一部分 */
+    background-color: lightblue;
+    padding: 20px;
+}
+
+/* 右边部分分为上下两部分，使用嵌套的 Flex 容器 */
+.right-column {
+    flex: 2;
+    /* 占据可用空间的两部分 */
+    display: flex;
+    flex-direction: column;
+    /* 垂直方向排列 */
+}
+
+/* 右上部分 */
+.right-top {
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+/* 右下部分分为三竖着的部分 */
+.right-bottom {
+    display: flex;
+    flex-direction: row;
+    /* 垂直方向排列 */
+    flex: 1;
+    /* 均分可用空间 */
+}
+
+/* 每个竖着的部分 */
+.right-bottom-item {
+    flex: 1;
+    /* 均分可用空间 */
+    background-color: lightcoral;
+    padding: 10px;
+}

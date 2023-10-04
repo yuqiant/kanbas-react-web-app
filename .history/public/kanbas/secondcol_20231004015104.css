@@ -11,7 +11,9 @@
 
 #secondColumn a {
     color: red;
+    /* 设置链接文本颜色为红色 */
     text-decoration: none;
+    /* 去掉超链接下划线 */
 
 }
 
@@ -23,14 +25,15 @@ ul {
 
 #secondColumn li {
     margin-bottom: 15px;
-    padding-left: 20px;
 }
 
 #secondColumn li.active a {
     color: black;
     padding-left: 8px;
 
-    /* padding-right: 10px; */
+    /* 最小间距 */
+    padding-right: 10px;
 
-    border-left: 2px solid black;
+    /* 最大间距 */
+    border-left: 1px solid black;
 }

@@ -1,0 +1,32 @@
+.wd-grid-row {
+    clear: both;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    height: 100vh;
+    /* Make container take up the full viewport height */
+}
+
+.box {
+    padding: 20px;
+    margin: 10px;
+}
+
+.columns {
+    display: flex;
+    /* Use flexbox for columns */
+    justify-content: space-between;
+    /* Distribute columns evenly horizontally */
+    flex-grow: 1;
+    /* Allow columns to grow and take remaining space */
+}
+
+.column1 {
+    flex-basis: calc(33.33% - 20px);
+    /* Divide the available space into three equal columns, minus margin */
+    padding: 20px;
+    margin: 10px;
+}

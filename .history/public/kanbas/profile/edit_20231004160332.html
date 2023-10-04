@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Interaction</title>
+    <link rel="stylesheet" href="../../vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.min.css" />
+    <link href="../account/account.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+</head>
+
+
+<body>
+    <div class="flex-container">
+        <div class="left-column">
+
+            <ul>
+                <li class="active"><i class="fa fa-user-circle fa-inverse" style="color: grey;"></i><a
+                        href="../account/account.html" style="color: red;">Account</a> </li>
+                <li><i class="fas fa-tachometer-alt" style="color: red;"></i><a href="#">Dashboard</a></li>
+                <li><i class="fas fa-book" style="color: red;"></i><a href="../coursecol.html">Course</a></li>
+                <li><i class="fas fa-calendar" style="color: red;""></i><a href=" #">Calendar</a></li>
+                <li><i class="fas fa-inbox" style="color: red;"></i><a href="#">Inbox</a></li>
+                <li><i class="fas fa-clock" style="color: red;"></i><a href="#">History</a></li>
+                <li><i class="fas fa-desktop" style="color: red;"></i><a href="#">Studio</a></li>
+                <li><i class="fas fa-share" style="color: red;"></i><a href="#">Commons</a></li>
+                <li><i class="fas fa-question-circle" style="color: red;"></i><a href="#">Help</a></li>
+            </ul>
+
+
+
+        </div>
+        <div class="right-column">
+
+            <div class="right-top">
+                <h6>Jose Annunziato's Profile</h6>
+
+
+            </div>
+            <div class="right-bottom">
+
+                <div class="right-bottom-item">
+                    <div class="right-bottom-item1">
+
+
+                        <ul>
+                            <li><a href="#">Notifications</a></li>
+                            <li class="active"><a href="../profile/index.html">Profiles</a></li>
+                            <li><a href="#">Files</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">ePortfolios</a></li>
+                            <li><a href="#">Shared Content</a></li>
+                            <li><a href="#">The Hub</a></li>
+                            <li><a href="#">Owickly Course Tools</a></li>
+                            <li><a href="#">Global Announcements</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-bottom-item">
+                    <div class="right-bottom-item2">
+
+                        <div class="part">
+                            <ul><i class="fa fa-user fa-6x" aria-hidden="true" style="color: grey;"></i></ul>
+                            <form id="text-fields">
+
+                                <label for="text-fields-name">Name: *</label><br />
+                                <input type="text" id="text-fields-name" /><br />
+                                <label for="text-fields-pronouns">Pronouns:</label>
+                                <select id="select-one-genre">
+                                    <option value="none">None</option>
+                                </select>
+
+                                <label for="text-fields-title">Title:</label>
+                                <input type="text" id="text-fields-title" /><br />
+
+                            </form>
+                        </div>
+
+
+
+                        <div class="part">
+                            <h3>Contact</h3>
+                            <div>No registered services, you can add some on the <a href="#"
+                                    style="color: red;">settings</a> page.</div>
+                        </div>
+
+                        <div class="part">
+                            <h3>Biography</h3>
+                            <div>Faculty, Software Engineer, AI, Spacw, and renewables enthusiast.</div>
+                        </div>
+
+                        <div class="part">
+
+                            <h3>Links</h3>
+                            <div><i class="fas fa-link"></i><a href="#" style="color: red;">YouTube</a></div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="right-bottom-item">
+                    <form action="edit.html" method="get">
+                        <button class="btn btn-light"><i class="fas fa-pencil-alt"></i> Edit Profile</button>
+
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<body>
+    <table>
+        <tr>
+            <td id="firstColumn" style="width: 150px;">
+                <ul>
+                    <li><a href="../accountcol.html">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="../coursecol.html">Course</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+            <td id="secondColumn" style="width: 150px;">
+                <ul>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="index.html">Profiles</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">ePortfolios</a></li>
+                    <li><a href="#">Shared Content</a></li>
+                    <li><a href="#">The Hub</a></li>
+                    <li><a href="#">Owickly Course Tools</a></li>
+                    <li><a href="#">Global Announcements</a></li>
+
+                </ul>
+            </td>
+            <td id="thirdColumn" style="width: 250px;">
+                <h2>Jose Annunziato</h2>
+
+                <form id="text-fields">
+
+                    <label for="text-fields-name">Name: *</label>
+                    <input type="text" id="text-fields-name" /><br />
+                    <label for="text-fields-pronouns">Pronouns:</label>
+                    <select id="select-one-genre">
+                        <option value="none">None</option>
+                    </select>
+
+                    <label for="text-fields-title">Title:</label>
+                    <input type="text" id="text-fields-title" /><br />
+
+                </form>
+
+                <h3>Contact</h3>
+                <div>No registered services, you can add some on the <a href="#">settings</a> page.</div>
+
+                <h3>Contact</h3>
+                <div>No registered services, you can add some on the <a href="#">settings</a> page.</div>
+
+                <h3>Biography</h3>
+
+                <form id="textarea">
+                    <label>Faculty, Software Engineer, AI, Spacw, and renewables enthusiast.</label><br />
+                    <textarea cols="30"
+                        rows="10">Faculty, Software Engineer, AI, Spacw, and renewables enthusiast.</textarea>
+                </form>
+
+                <h3>Links</h3>
+                <ul>
+                    <li>
+                        <link rel="stylesheet"
+                            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+                        <a href="https://www.youtube.com" target="_blank">
+                            YouTube <i class="fas fa-external-link-alt"></i> Links to an external site.
+                        </a>
+
+
+                    </li>
+                </ul>
+
+                <form id="text-fields">
+                    <h3>Title</h3>
+                    <input type="text" id="text-fields-name" /><br />
+
+                    <div>-></div>
+
+                    <h3>URL</h3>
+                    <input type="text" id="text-fields-name" /><br />
+                    <a href="#">Remove</a>
+
+                </form>
+                <button type="button">Add another link</button>
+                <button type="button">Cancel</button>
+
+                <form action="index.html" method="get">
+                    <button type="save">Save Profile</button>
+                </form>
+
+                <button type="button">Edit Profile</button>
+
+                <form action="index.html" method="get">
+                    <button type="cancel">Cancel Profile</button>
+                </form>
+
+        </tr>
+    </table>
+
+</body>
+
+</html>
