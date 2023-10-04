@@ -1,0 +1,35 @@
+#secondColumn {
+    width: 200px;
+    /* background-color: #f5f5f5; */
+    /* Background color for the sidebar */
+    padding: 10px;
+}
+
+
+
+
+#secondColumn a {
+    color: red;
+    /* 设置链接文本颜色为红色 */
+    text-decoration: none;
+    /* 去掉超链接下划线 */
+
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#secondColumn li {
+    margin-bottom: 15px;
+    border-left: 20px;
+}
+
+#secondColumn li.active a {
+    color: black;
+    padding-left: 10px;
+    /* Adjust this value as needed */
+    border-left: 20px solid black;
+}
