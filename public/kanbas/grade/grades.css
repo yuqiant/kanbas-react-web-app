@@ -3,9 +3,11 @@
     height: 100%;
 }
 
-
+/* 左边列 */
 .left-column {
-
+    /* flex: 1; */
+    /* 占据可用空间的一部分 */
+    /* padding: 20px; */
     width: 0 0 80px;
     /* Adjust sidebar width as needed (between 75 and 85 pixels) */
     background-color: black;
@@ -50,24 +52,24 @@
     /* 垂直方向排列 */
 }
 
-
+/* 右上部分 */
 .right-top {
     padding: 20px;
 }
 
-
+/* 右下部分分为三竖着的部分 */
 .right-bottom {
     display: flex;
     flex-direction: row;
-
+    /* 垂直方向排列 */
     flex: 1;
-
+    /* 均分可用空间 */
 }
 
-
+/* 每个竖着的部分 */
 .right-bottom-item {
     flex: 1;
-
+    /* 均分可用空间 */
     padding: 10px;
 }
 
@@ -106,7 +108,7 @@
 
 
 .right-bottom-item2 {
-    width: 700px;
+    width: 900px;
 
     /* padding: 10px; */
     border-left: 25px;
@@ -129,4 +131,57 @@
 
 .smaller-text {
     font-size: 14px;
+}
+
+.percentage {
+    display: inline-block;
+    margin-right: 10px;
+    /* 添加间距 */
+}
+
+.icon {
+    display: inline-block;
+}
+
+.align-items-center {
+    padding-left: 10px;
+}
+
+.align-items-start {
+    border-left: 3px solid green;
+
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+}
+
+.text-end {
+    width: 300px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.checkbox-container {
+    border: 1px solid lightgray;
+    padding: 10px;
+    /* Add some padding for spacing */
+}
+
+/* Apply border to checkboxes and labels */
+input[type="checkbox"] {
+    border: 1px solid lightgray;
+    padding: 5px;
+    /* Add some padding for spacing */
+}
+
+.tool-icon::before {
+    content: "\f7d9";
+    /* Unicode value for the tool icon */
+    font-family: "Font Awesome 5 Free";
+    /* Specify the Font Awesome font family */
+    font-weight: 900;
+    /* Adjust the font-weight based on the icon style */
 }

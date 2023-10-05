@@ -5,9 +5,7 @@
 
 /* 左边列 */
 .left-column {
-    /* flex: 1; */
-    /* 占据可用空间的一部分 */
-    /* padding: 20px; */
+
     width: 0 0 80px;
     /* Adjust sidebar width as needed (between 75 and 85 pixels) */
     background-color: black;
@@ -39,29 +37,28 @@
 .right-column {
 
     flex: 2;
-    /* 占据可用空间的两部分 */
+
     display: none;
     flex-direction: column;
-    /* 垂直方向排列 */
+
 }
 
-/* 右上部分 */
+
 .right-top {
     padding: 20px;
 }
 
-/* 右下部分分为三竖着的部分 */
 .right-bottom {
     display: flex;
     flex-direction: row;
-    /* 垂直方向排列 */
+
     flex: 1;
-    /* 均分可用空间 */
+
 }
 
-/* 每个竖着的部分 */
+
 .right-bottom-item {
     flex: 1;
-    /* 均分可用空间 */
+
     padding: 10px;
 }
