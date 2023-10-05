@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../../vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.min.css" />
+    <link href="../navagationtab/navigationbar.css" rel="stylesheet" />
+    <style>
+        /* Styling for the selected Dashboard link */
+        .selected-link {
+            color: red;
+        }
+
+        /* Styling for the horizontal rule */
+        hr {
+            border: 1px solid grey;
+        }
+
+        /* Styling for the Published Courses section */
+        .published-courses {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        /* Styling for each course card */
+        .course-card {
+            width: 250px;
+            /* Adjust as needed */
+            margin: 15px;
+            /* Adjust spacing as needed */
+            /* Add other styling properties such as padding, background, etc. */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Kanbas Navigation sidebar with selected Dashboard link -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" class="selected-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <!-- Add other sidebar links -->
+        </ul>
+    </div>
+
+    <!-- Dashboard title and horizontal rule -->
+    <h1>Dashboard</h1>
+    <hr>
+
+    <!-- Published Courses section -->
+    <h2 class="published-courses">Published Courses</h2>
+    <div class="published-courses">
+        <!-- Course 1 -->
+        <div class="course-card card">
+            <img src="course1-image.jpg" alt="Course 1 Image">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#">Course 1 Title</a></h5>
+                <p class="card-text">Term: Spring</p>
+                <p class="card-text">Year: 2023</p>
+                <p class="card-text">Section: A</p>
+            </div>
+        </div>
+
+        <div class="course-card card">
+            <img src="course1-image.jpg" alt="Course 1 Image">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#">Course 1 Title</a></h5>
+                <p class="card-text">Term: Spring</p>
+                <p class="card-text">Year: 2023</p>
+                <p class="card-text">Section: A</p>
+            </div>
+        </div>
+        <div class="course-card card">
+            <img src="course1-image.jpg" alt="Course 1 Image">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#">Course 1 Title</a></h5>
+                <p class="card-text">Term: Spring</p>
+                <p class="card-text">Year: 2023</p>
+                <p class="card-text">Section: A</p>
+            </div>
+        </div>
+
+        <!-- Add more course cards (Course 2, Course 3, etc.) as needed -->
+    </div>
+
+    <!-- Include Bootstrap and other scripts if needed -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

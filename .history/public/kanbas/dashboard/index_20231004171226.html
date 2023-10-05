@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        /* 创建一个 Flex 容器，将页面分成左侧和右侧两个部分 */
+        .flex-container {
+            display: flex;
+            height: 100vh;
+            /* 100%视窗高度，使容器充满整个页面 */
+        }
+
+        /* 左侧列 */
+        .left-column {
+            flex: 1;
+            /* 占据可用空间的一部分 */
+            background-color: lightblue;
+            /* 左侧背景颜色 */
+            padding: 20px;
+            /* 内边距 */
+        }
+
+        /* 右侧部分分为上下两部分，使用嵌套的 Flex 容器 */
+        .right-column {
+            flex: 2;
+            /* 占据可用空间的两部分 */
+            display: flex;
+            flex-direction: column;
+            /* 垂直方向排列 */
+        }
+
+        /* 右上部分 */
+        .right-top {
+            background-color: lightgreen;
+            /* 右上部分背景颜色 */
+            padding: 20px;
+            /* 内边距 */
+        }
+
+        /* 右下部分分为多行，使用 Flex 容器和嵌套的 Flex 容器 */
+        .right-bottom {
+            flex: 1;
+            /* 占据可用空间的一部分 */
+            display: flex;
+            flex-direction: column;
+            /* 垂直方向排列 */
+        }
+
+        /* 每一行 */
+        .right-bottom-row {
+            display: flex;
+            /* 嵌套的 Flex 容器，用于水平排列 */
+            margin-bottom: 10px;
+            /* 行之间的垂直间距 */
+        }
+
+        /* 每一列 */
+        .right-bottom-item {
+            flex: 1;
+            /* 每列均分可用空间 */
+            background-color: lightcoral;
+            /* 列的背景颜色 */
+            padding: 10px;
+            /* 内边距 */
+            margin-right: 10px;
+            /* 列之间的水平间距 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="left-column">
+            <!-- 左侧内容 -->
+            <!-- 在左侧放置你的内容 -->
+        </div>
+        <div class="right-column">
+            <div class="right-top">
+                <!-- 右上部分内容 -->
+                <!-- 在右上部分放置你的内容 -->
+            </div>
+            <div class="right-bottom">
+                <!-- 右下部分内容 -->
+                <!-- 使用嵌套的 Flex 容器来创建多行和列 -->
+                <div class="right-bottom-row">
+                    <div class="right-bottom-item">
+                        <!-- 第一列内容 -->
+                        <!-- 在这里放置第一列的内容 -->
+                    </div>
+                    <div class="right-bottom-item">
+                        <!-- 第二列内容 -->
+                        <!-- 在这里放置第二列的内容 -->
+                    </div>
+                </div>
+                <div class="right-bottom-row">
+                    <div class="right-bottom-item">
+                        <!-- 第三列内容 -->
+                        <!-- 在这里放置第三列的内容 -->
+                    </div>
+                    <div class="right-bottom-item">
+                        <!-- 第四列内容 -->
+                        <!-- 在这里放置第四列的内容 -->
+                    </div>
+                </div>
+                <!-- 添加更多的行和列，根据需要 -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

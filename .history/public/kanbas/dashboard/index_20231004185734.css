@@ -1,0 +1,134 @@
+.flex-container {
+    display: flex;
+    height: 100vh;
+}
+
+
+.left-column {
+    /* flex: 1; */
+    /* 占据可用空间的一部分 */
+    /* padding: 20px; */
+    width: 0 0 80px;
+    /* Adjust sidebar width as needed (between 75 and 85 pixels) */
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.left-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-column li {
+    margin: 8px 0;
+    /* Adjust margin between links as needed (between 5 and 10 pixels) */
+    padding: 8px;
+    /* Adjust padding around links as needed (between 5 and 10 pixels) */
+}
+
+.left-column li.active {
+    color: red;
+    background-color: white;
+
+
+}
+
+
+
+.left-column a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.right-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-top {
+
+    padding: 20px;
+
+}
+
+.right-bottom {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    /* 垂直方向排列 */
+}
+
+/* 每一行 */
+.right-bottom-row {
+    display: flex;
+    /* 嵌套的 Flex 容器，用于水平排列 */
+    margin-bottom: 10px;
+    /* 行之间的垂直间距 */
+}
+
+
+.right-bottom-item {
+    flex: 1;
+
+    padding: 10px;
+    margin-right: 10px;
+
+}
+
+
+.published-courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 课程卡片样式 */
+.course-card {
+    width: 250px;
+    margin: 0 0 30px 0;
+    /* 调整卡片间距，上下各 30px */
+    /* 其他样式，例如背景颜色、边框等，可以根据需要自行添加 */
+}
+
+.blue-background {
+    background-color: blue;
+    /* 上半部分蓝色背景 */
+    height: 50%;
+    /* 控制上半部分高度为卡片的一半 */
+}
+
+.white-background {
+    background-color: white;
+    /* 下半部分白色背景 */
+    height: 50%;
+    /* 控制下半部分高度为卡片的一半 */
+    padding: 10px;
+    /* 可选：添加内边距来分隔上下部分 */
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+
+    /* 当窗口宽度小于 1200px 时，每行最多显示 3 个课程 */
+    .published-courses {
+        justify-content: flex-start;
+        /* 左对齐，课程卡片靠左排列 */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* 当窗口宽度小于 768px 时，每行最多显示 2 个课程 */
+    .published-courses {
+        flex-direction: column;
+        /* 垂直排列，一列一个课程 */
+        align-items: center;
+        /* 居中对齐课程卡片 */
+    }
+}

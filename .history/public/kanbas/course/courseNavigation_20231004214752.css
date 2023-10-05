@@ -1,0 +1,128 @@
+.flex-container {
+    display: flex;
+    height: 100%;
+}
+
+/* 左边列 */
+.left-column {
+    /* flex: 1; */
+    /* 占据可用空间的一部分 */
+    /* padding: 20px; */
+    width: 0 0 80px;
+    /* Adjust sidebar width as needed (between 75 and 85 pixels) */
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.left-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-column li {
+    margin: 8px 0;
+    /* Adjust margin between links as needed (between 5 and 10 pixels) */
+    padding: 8px;
+    /* Adjust padding around links as needed (between 5 and 10 pixels) */
+}
+
+.left-column li.active {
+    color: red;
+    background-color: white;
+
+
+}
+
+
+
+.left-column a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.right-column {
+
+    flex: 2;
+    /* 占据可用空间的两部分 */
+    display: flex;
+    flex-direction: column;
+    /* 垂直方向排列 */
+}
+
+/* 右上部分 */
+.right-top {
+    padding: 20px;
+}
+
+/* 右下部分分为三竖着的部分 */
+.right-bottom {
+    display: flex;
+    flex-direction: row;
+    /* 垂直方向排列 */
+    flex: 1;
+    /* 均分可用空间 */
+}
+
+/* 每个竖着的部分 */
+.right-bottom-item {
+    flex: 1;
+    /* 均分可用空间 */
+    padding: 10px;
+}
+
+.right-bottom-item1 {
+    width: 200px;
+
+    /* padding: 10px; */
+    border-left: 25px
+}
+
+.right-bottom-item1 a {
+    color: red;
+    text-decoration: none;
+
+}
+
+
+.right-bottom-item1 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.right-bottom-item1 li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.right-bottom-item1 li.active a {
+    color: black;
+    padding-left: 8px;
+
+    /* padding-right: 10px; */
+
+    border-left: 2px solid black;
+}
+
+
+.right-bottom-item2 {
+    width: 700px;
+
+    /* padding: 10px; */
+    border-left: 25px;
+    /* flex-direction: column; */
+}
+
+.custom-indent {
+    padding-left: 40px;
+    /* 调整适当的缩进大小 */
+}
+
+.right-bottom-item3 {
+    width: 100px;
+    /* padding: 10px; */
+    /* border-left: 25px; */
+    /* flex-direction: column; */
+}
