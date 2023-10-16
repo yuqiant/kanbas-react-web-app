@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <link rel="stylesheet" href="../../vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.min.css" />
+    <link href="index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="left-column">
+
+            <ul>
+                <li><i class="fa fa-user-circle fa-inverse" style="color: grey;"></i><a
+                        href="../account/account.html">Account</a> </li>
+                <li><i class="fas fa-tachometer-alt" style="color: red;"></i><a href="#">Dashboard</a></li>
+                <li class="active"><i class="fas fa-book" style="color: red;"></i><a
+                        href="../course/courseNavigation.html" style="color: red;">Course</a>
+                </li>
+                <li><i class="fas fa-calendar" style="color: red;""></i><a href=" #">Calendar</a></li>
+                <li><i class="fas fa-inbox" style="color: red;"></i><a href="#">Inbox</a></li>
+                <li><i class="fas fa-clock" style="color: red;"></i><a href="#">History</a></li>
+                <li><i class="fas fa-desktop" style="color: red;"></i><a href="#">Studio</a></li>
+                <li><i class="fas fa-share" style="color: red;"></i><a href="#">Commons</a></li>
+                <li><i class="fas fa-question-circle" style="color: red;"></i><a href="#">Help</a></li>
+            </ul>
+
+        </div>
+        <div class="right-column">
+
+            <div class="right-top">
+                <<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="dashboard/index.html"
+                                style="color: red;">CS5610.11744.202310</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Home</li>
+                    </ol>
+                    </nav>
+                    <div class="float-sm-end"> <button class="btn btn-light btn-sm">Student View</button>
+                    </div><br />
+                    <hr />
+
+
+            </div>
+            <div class="right-bottom">
+
+
+                <div class="right-bottom-item1">
+
+
+                    <ul>
+                        <li class="active"><a href="home.html" style="color: black;">Home</a></li>
+                        <li><a href="#">Modules</a></li>
+                        <li><a href="#">Piazza</a></li>
+                        <li><a href="#">Zoom Meetings</a></li>
+                        <li><a href="assignment/index.html">Assignments</a></li>
+                        <li><a href="#">Quizzes</a></li>
+                        <li><a href="grades.html">Grades</a></li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Panopto Video</a></li>
+                        <li><a href="#">Discussions</a></li>
+                        <li><a href="#">Announcements</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Rubrics</a></li>
+                        <li><a href="#">Outcomes</a></li>
+                        <li><a href="#">Collaborations</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="coursesetting.html">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="right-bottom-item2">
+
+                    <div class="float-sm-end">
+                        <div class="btn-group" style="margin-right: -5px;">
+                            <button class="btn btn-light btn-sm">Collapse All</button>
+                            <button class="btn btn-light btn-sm">View Progress</button>
+
+                            <div class="dropdown">
+                                <button class="btn btn-light btn-sm dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-check-circle"
+                                        aria-hidden="true" style="color: green;"></i>
+                                    Publish All
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-danger btn-sm"><i class="fa fa-plus"
+                                    aria-hidden="true"></i>Module</button>
+                            <button class="btn btn-light btn-sm"><i class="fa fa-ellipsis-v"
+                                    aria-hidden="true"></i></button>
+                        </div>
+
+                    </div><br>
+                    <hr />
+
+
+
+
+                    <!-- Module 1 -->
+                    <div class="list-group mb-4">
+                        <a href="#" class="list-group-item list-group-item-secondary">Week 0 - INTRO</a>
+                        <a href="#" class="list-group-item">LEARNING OBJECTIVES</a>
+                        <!-- <ul class="list-group custom-indent"> -->
+                        <li class="list-group-item custom-indent">Introduction to the course</li>
+                        <li class="list-group-item custom-indent">Learn what is Web Development</li>
+                        <li class="list-group-item custom-indent">Creating a development environment</li>
+                        <li class="list-group-item custom-indent">Creating a Web Application</li>
+                        <li class="list-group-item custom-indent">Getting started with the 1st assignment</li>
+                        <!-- </ul> -->
+
+                        <a href="#" class="list-group-item">READING</a>
+                        <li class="list-group-item custom-indent">Full Stack Developer - Chapter 1 - Introduction</li>
+                        <li class="list-group-item custom-indent">Full Stack Developer - Chapter 2 - Creating User
+                            Interfaces With
+                            HTML</li>
+
+
+                        <a href="#" class="list-group-item">SLIDES</a>
+                        <a href="#" class="list-group-item custom-indent" style="color: red;"><i class="fas fa-link"
+                                style="color: green;"></i>Introduction to Web
+                            Development</a>
+                        <a href="#" class="list-group-item custom-indent" style="color: red;"><i class="fas fa-link"
+                                style="color: green;"></i>Creating an HTTP server
+                            with Node.js</a>
+
+
+                    </div>
+
+                    <div class="list-group mb-4">
+                        <a href="#" class="list-group-item list-group-item-secondary">Week 1 - HTML</a>
+                        <a href="#" class="list-group-item">LEARNING OBJECTIVES</a>
+                        <!-- <ul class="list-group custom-indent"> -->
+                        <li class="list-group-item custom-indent">Learn how to create user interfaces with HTML</li>
+                        <li class="list-group-item custom-indent">Keep working on assignment 1</li>
+
+                        <!-- </ul> -->
+
+                        <a href="#" class="list-group-item">READING</a>
+                        <li class="list-group-item custom-indent">Full Stack Developer - Chapter 1 - Introduction</li>
+                        <li class="list-group-item custom-indent">Full Stack Developer - Chapter 2 - Creating User
+                            Interfaces With
+                            HTML</li>
+
+
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="right-bottom-item3">
+                    <h6>Course Status</h6>
+                    <div class="btn-group" style="margin-right: -5px;">
+                        <button class="btn btn-light btn-sm"><i class="fas fa-ban"></i>Unpublish</button>
+                        <button class="btn btn-success btn-sm"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                            Published</button>
+                    </div><br />
+                    <button class="btn btn-light btn-sm">Import Existing Content</button>
+                    <button class="btn btn-light btn-sm">Import From Commons</button>
+                    <button class="btn btn-light btn-sm">Choose Home Page</button>
+                    <button class="btn btn-light btn-sm">View Course Stream</button>
+                    <button class="btn btn-light btn-sm">New Announcement</button>
+                    <button class="btn btn-light btn-sm">New Analytics</button>
+                    <button class="btn btn-light btn-sm">View Course Notifications</button><br />
+
+                    Coming Up
+                    <div class="float-sm-end smaller-text"><a href="#" style="color: red;">View Calendar</a></div>
+                    <hr />
+
+                    <div class="part">
+                        Lecture<br />
+                        CS4550.12631.202410<br />
+                        Sep 7 at 11:45am<br />
+                    </div>
+
+                    <div class="part">
+                        Lecture<br />
+                        CS4550.12631.202410<br />
+                        Sep 11 at 11:45am<br />
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+</body>
+
+<body>
+    <table>
+        <tr>
+            <td id="firstColumn" style="width: 150px;">
+                <ul>
+                    <li><a href="../accountcol.html">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="../coursecol.html">Course</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+            <td id="secondColumn" style="width: 150px;">
+                <ul>
+                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="../assignment/index.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="../grades.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="../coursesetting.html">Settings</a></li>
+                </ul>
+            </td>
+            <td id="thirdColumn" style="width: 250px;">
+                <form id="text-fields">
+                    <input id="text-fields-assginment" placeholder="Search for Assignments" /><br />
+                    <button type="button">Group</button>
+                    <button type="button">Assignment</button>
+                    <select id="select-one">
+                        <option value="ALL">Edit Assignment Date</option>
+                    </select>
+                </form>
+
+                <h2>ASSIGNMENT 40% of Total
+                    <select id="select-one">
+                        <option value="ALL">Edit</option>
+                        <option value="ALL">Speed Grader</option>
+                        <option value="ALL">Duplicate</option>
+                        <option value="ALL">Delete</option>
+                        <option value="ALL">Move To...</option>
+                        <option value="ALL">Send To...</option>
+                        <option value="ALL">Copy To...</option>
+                        <option value="ALL">Share to Commons</option>
+                    </select>
+                </h2>
+
+                <ul>
+                    <li><a href="edit.html">A1 - ENV + HTML</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="edit.html">A2 - CSS + BOOTSTRAP</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="edit.html">A3 - JS + REACT</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="edit.html">A4 - STATE + REDUX</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="edit.html">A5 - NODE + SESSION</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="edit.html">A6 - MONGO + MOONGOOSE</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                </ul>
+
+                <h2>QUIZZES 10% of Total
+                    <select id="select-one">
+                        <option value="ALL">Edit</option>
+                        <option value="ALL">Speed Grader</option>
+                        <option value="ALL">Duplicate</option>
+                        <option value="ALL">Delete</option>
+                        <option value="ALL">Move To...</option>
+                        <option value="ALL">Send To...</option>
+                        <option value="ALL">Copy To...</option>
+                        <option value="ALL">Share to Commons</option>
+                    </select>
+                </h2>
+
+                <ul>
+                    <li><a href="edit.html">Q1 - HTML</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="edit.html">Q2 - CSS</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="edit.html">Q3 - JS,ES6</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="edit.html">Q4 - NODE</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="edit.html">Q5 - MONGO</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                </ul>
+
+                <h2>EXAMS 20% of Total
+                    <select id="select-one">
+                        <option value="ALL">Edit</option>
+                        <option value="ALL">Speed Grader</option>
+                        <option value="ALL">Duplicate</option>
+                        <option value="ALL">Delete</option>
+                        <option value="ALL">Move To...</option>
+                        <option value="ALL">Send To...</option>
+                        <option value="ALL">Copy To...</option>
+                        <option value="ALL">Share to Commons</option>
+                    </select>
+                </h2>
+
+                <ul>
+                    <li><a href="edit.html">Midterm</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                    <li><a href="edit.html">Final</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                </ul>
+
+                <h2>PROJECT 30% of Total
+                    <select id="select-one">
+                        <option value="ALL">Edit</option>
+                        <option value="ALL">Speed Grader</option>
+                        <option value="ALL">Duplicate</option>
+                        <option value="ALL">Delete</option>
+                        <option value="ALL">Move To...</option>
+                        <option value="ALL">Send To...</option>
+                        <option value="ALL">Copy To...</option>
+                        <option value="ALL">Share to Commons</option>
+                    </select>
+                </h2>
+
+                <ul>
+                    <li><a href="edit.html">Project</a></li>
+                    <div><a href="edit.html">Multiple Modules</a> | Not available yet</div>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+
+            </td>
+
+        </tr>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Interaction</title>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexbox Layout</title>
+        <link rel="stylesheet" href="../../vendors/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.min.css" />
+        <link href="grades.css" rel="stylesheet" />
+    </head>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="left-column">
+
+            <ul>
+                <li><i class="fa fa-user-circle fa-inverse" style="color: grey;"></i><a
+                        href="../account/account.html">Account</a> </li>
+                <li><i class="fas fa-tachometer-alt" style="color: red;"></i><a href="#">Dashboard</a></li>
+                <li class="active"><i class="fas fa-book" style="color: red;"></i><a
+                        href="../course/courseNavigation.html" style="color: red;">Course</a>
+                </li>
+                <li><i class="fas fa-calendar" style="color: red;""></i><a href=" #">Calendar</a></li>
+                <li><i class="fas fa-inbox" style="color: red;"></i><a href="#">Inbox</a></li>
+                <li><i class="fas fa-clock" style="color: red;"></i><a href="#">History</a></li>
+                <li><i class="fas fa-desktop" style="color: red;"></i><a href="#">Studio</a></li>
+                <li><i class="fas fa-share" style="color: red;"></i><a href="#">Commons</a></li>
+                <li><i class="fas fa-question-circle" style="color: red;"></i><a href="#">Help</a></li>
+            </ul>
+
+        </div>
+        <div class="right-column">
+
+            <div class="right-top">
+                <nav style="--bs-breadcrumb-divider: '>'; color: red;" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../dashboard/index.html"
+                                style="color: red;">CS5610.11744.202310</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Grades</li>
+                    </ol>
+                </nav>
+
+
+                <div class="float-sm-end"> <button class="btn btn-light btn-sm">Student View</button>
+                </div><br />
+                <hr />
+
+
+            </div>
+            <div class="right-bottom">
+
+
+                <div class="right-bottom-item1">
+
+
+                    <ul>
+                        <li><a href="../home.html">Home</a></li>
+                        <li><a href="#">Modules</a></li>
+                        <li><a href="#">Piazza</a></li>
+                        <li><a href="#">Zoom Meetings</a></li>
+                        <li><a href="../assignment/index.html">Assignments</a></li>
+                        <li><a href="#">Quizzes</a></li>
+                        <li class="active"><a href="grades.html" style="color: black;">Grades</a></li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Panopto Video</a></li>
+                        <li><a href="#">Discussions</a></li>
+                        <li><a href="#">Announcements</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Rubrics</a></li>
+                        <li><a href="#">Outcomes</a></li>
+                        <li><a href="#">Collaborations</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="coursesetting.html">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="right-bottom-item2">
+
+
+                    <div class="float-sm-end">
+                        <div class="btn-group" style="margin-right: -5px;">
+
+                            <div class="btn-group">
+                                <button class="btn btn-light btn-sm" type="button" aria-expanded="false"><i
+                                        class="fas fa-upload"></i> Import
+                                </button>
+                                <button class="btn btn-light btn-sm dropdown-toggle" type="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                        class="fas fa-download"></i>
+                                    Export
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Option 1</a>
+                                    <a class="dropdown-item" href="#">Option 2</a>
+                                    <a class="dropdown-item" href="#">Option 3</a>
+                                </div>
+                            </div>
+                            <span class="tool-icon"></span>
+
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Studnets Name</h6>
+                                <form id="text-fields">
+                                    <input id="text-fields-studentname" placeholder="Search Students" /><br />
+                                </form>
+
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Assignments Name</h6>
+                                <form id="text-fields">
+                                    <input id="text-fields-assginment" placeholder="Search Assignments" /><br />
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 text-end">
+                                <h6>Assignment Group</h6>
+                            </div>
+                            <div class="col-md-6">
+                                <select id="select-one" style="width: 100%;">
+                                    <option value="ALL">ASSIGNMENTS</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 text-end">
+                                <h6>Display Grade as</h6>
+                            </div>
+                            <div class="col-md-6">
+                                <select id="select-one" style="width: 100%;">
+                                    <option value="ALL">Percentage</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="text-center">
+                                    <input type="checkbox" value="GROUPASSIGNMENT" name="check-genre"
+                                        id="chkbox-groupassignment" />
+                                    <label for="chkbox-groupassignment">Do not count this assignment towards the final
+                                        grade</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6 text-end">
+                                <h6>Submission Type</h6>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="checkbox-container">
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <select id="select-one">
+                                                <option value="ALL">Online</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h6>Online Entry Options</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="checkbox" value="GROUPASSIGNMENT" name="check-genre"
+                                                id="chkbox-groupassignment1" />
+                                            <label for="chkbox-groupassignment1">Text Entry</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="checkbox" value="GROUPASSIGNMENT" name="check-genre"
+                                                id="chkbox-groupassignment2" />
+                                            <label for="chkbox-groupassignment2">Website URL</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="checkbox" value="GROUPASSIGNMENT" name="check-genre"
+                                                id="chkbox-groupassignment3" />
+                                            <label for="chkbox-groupassignment3">Media Recordings</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="checkbox" value="GROUPASSIGNMENT" name="check-genre"
+                                                id="chkbox-groupassignment4" />
+                                            <label for="chkbox-groupassignment4">Student Annotation</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="checkbox" value="GROUPASSIGNMENT" name="check-genre"
+                                                id="chkbox-groupassignment5" />
+                                            <label for="chkbox-groupassignment5">File Upload</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6 text-end">
+                                <h6>Assign</h6>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="checkbox-container">
+                                    <div class="row">
+                                        <h6>Assign to</h6><br />
+                                        <form id="text-fields">
+                                            <input id="text-fields-assginment" style="width: 100%;" />
+                                        </form>
+                                    </div>
+
+                                    <div class="row">
+                                        <h6>Due</h6><br />
+                                        <input type="date" id="text-fields-dob" value="2021-01-01" /><br />
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">Available from<br />
+                                            <input type="date" id="text-fields-dob" value="2021-01-01"
+                                                style="width: 100%;" />
+                                        </div>
+                                        <div class="col-md-6">Until<br />
+                                            <input type="date" id="text-fields-dob" value="2021-01-01"
+                                                style="width: 100%;" />
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <button class="btn btn-light btn-sm"><i class="fas fa-plus"
+                                        style="width: 400px;"></i>Add</button>
+
+                            </div>
+                        </div>
+                        <hr />
+                        <input type="checkbox" value="GROUPASSIGNMENT" name="check-genre" id="chkbox-groupassignment" />
+                        <label for="chkbox-groupassignment">Notify users that content has changed.
+                        </label>
+                        <div class="float-sm-end"> <a href="index.html" class="btn btn-light btn-sm">Cancel</a>
+                            <a href="index.html" class="btn btn-danger btn-sm">Save</a>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+</body>
+
+<body>
+    <table>
+        <tr>
+            <td id="firstColumn" style="width: 150px;">
+                <ul>
+                    <li><a href="Account/accountcol.html">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="coursecol.html">Course</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+            <td id="secondColumn" style="width: 150px;">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="assignment/index.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="grades.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="coursesetting.html">Settings</a></li>
+                </ul>
+            </td>
+            <td id="thirdColumn" style="width: 250px;">
+                <select id="select-one">
+                    <option value="ALL">Gradebook</option>
+
+                </select>
+                <button type="button">Input</button>
+
+                <select id="select-one">
+                    <option value="ALL">Export</option>
+
+                </select>
+                <button type="button">Configure</button>
+
+                <h2>Student Names</h2>
+                <form id="text-fields">
+                    <input id="text-fields-studentname" placeholder="Search Students" /><br />
+                </form>
+
+                <h2>Assignment Names</h2>
+                <form id="text-fields">
+                    <input id="text-fields-assginment" placeholder="Search Assignments" /><br />
+                </form>
+
+                <button type="button">Apply Filters</button>
+
+
+                <table border="1" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Student Names</th>
+                            <th>Assignement 1 Out of 100</th>
+                            <th>Assignement 2 Out of 100</th>
+                            <th>Assignement 3 Out of 100</th>
+                            <th>Assignement 4 Out of 100</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Will Smith</td>
+                            <td><input type="text" name="score" id="text-fields-score1" placeholder="Enter Score"></td>
+                            <td>76</td>
+                            <td>85</td>
+                            <td>87</td>
+                        </tr>
+                        <tr>
+                            <td>Maggie Hilton</td>
+                            <td>98</td>
+                            <td>76</td>
+                            <td>81</td>
+                            <td><input type="text" name="score" id="text-fields-score1" placeholder="Enter Score">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sam Wellington</td>
+                            <td><input type="text" name="score" id="text-fields-score1" placeholder="Enter Score">
+                            </td>
+                            <td>93</td>
+                            <td>95</td>
+                            <td>85</td>
+                        </tr>
+                        <tr>
+                            <td>Alex Oh</td>
+                            <td>87</td>
+                            <td>72</td>
+                            <td>93</td>
+                            <td>88</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+
+
+
+            </td>
+
+        </tr>
+    </table>
+
+</body>
+
+</html>
