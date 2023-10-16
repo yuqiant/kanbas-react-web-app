@@ -1,0 +1,11 @@
+function FunctionParenthesisAndParameters() {
+    const square = a => {
+        return a * a;
+    }
+    const plusOne = a => {
+        return a + 1;
+    }
+
+    const twoSquared = square(2);
+    const threePlusOne = plusOne(3);
+}

@@ -1,0 +1,18 @@
+import Assignment3 from "./a3";
+import { Link } from "react-router-dom";
+import Nav from "../Nav";
+import Styles from "./Styles";
+
+function Labs() {
+    return (
+        <div>
+            {/* <Link to="/hello">Hello</Link> |
+            <Link to="/Labs/a3">A3</Link> |
+            <Link to="/Kanbas">Kanbas</Link> */}
+            <Nav />
+
+            <Assignment3 />
+        </div>
+    );
+}
+export default Labs;
