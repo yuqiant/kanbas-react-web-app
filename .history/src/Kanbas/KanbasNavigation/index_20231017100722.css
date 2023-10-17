@@ -1,0 +1,47 @@
+.left-column {
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    width: 80px;
+    /* 设置左侧栏的宽度在 75 到 85 像素之间 */
+}
+
+/* 移除默认列表样式 */
+.left-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* 设置链接的样式 */
+.left-column li {
+    margin: 8px 0;
+    /* 调整文本和图标之间的上下间距 */
+    padding: 8px 0;
+    /* 调整链接的上下间距 */
+}
+
+.left-column a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    /* 设置链接周围的内边距 */
+}
+
+/* 设置默认图标样式 */
+.left-column i {
+    color: red;
+}
+
+/* 设置选中链接的样式 */
+.left-column a.active {
+    background-color: white;
+    color: red;
+}
+
+/* 设置Account图标的样式 */
+.left-column a.active i.fa-user-circle {
+    color: white;
+}
