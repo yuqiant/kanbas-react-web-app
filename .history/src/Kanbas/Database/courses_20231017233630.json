@@ -1,0 +1,44 @@
+[
+    {
+        "_id": "CS101",
+        "name": "Web Development",
+        "number": "CS5610",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    },
+    {
+        "_id": "CS102",
+        "name": "Computer Foundation",
+        "number": "CS5001",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    },
+    {
+        "_id": "CS103",
+        "name": "Discrete Structure",
+        "number": "CS5002",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    }
+    {
+        "_id": "CS103",
+        "name": "Discrete Structure",
+        "number": "CS5002",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    }
+    {
+        "_id": "CS103",
+        "name": "Discrete Structure",
+        "number": "CS5002",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    }
+    {
+        "_id": "CS103",
+        "name": "Discrete Structure",
+        "number": "CS5002",
+        "startDate": "2023-01-10",
+        "endDate": "2023-05-15"
+    }
+]

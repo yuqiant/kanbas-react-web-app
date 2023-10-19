@@ -1,0 +1,20 @@
+/* 默认情况下，显示 4 个课程卡片每行 */
+.card {
+    flex-basis: calc(25% - 20px);
+
+    margin: 10px;
+}
+
+
+
+@media (max-width: 992px) {
+    .card {
+        flex-basis: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-basis: 50%;
+    }
+}

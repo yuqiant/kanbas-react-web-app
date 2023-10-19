@@ -1,0 +1,41 @@
+/* 默认情况下，显示 4 个课程卡片每行 */
+.card {
+    flex-basis: calc(25% - 20px);
+
+    margin: 10px;
+}
+
+/* 当窗口宽度小于某个阈值时，显示 3 个课程卡片每行 */
+@media (max-width: 992px) {
+    .card {
+        width: 33.33%;
+    }
+}
+
+/* 当窗口宽度更小时，显示 2 个课程卡片每行 */
+@media (max-width: 768px) {
+    .card {
+        width: 50%;
+    }
+}
+
+.card.course-card {
+    flex-basis: calc(25% - 20px);
+
+    margin: 10px;
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .card.course-card {
+        flex-basis: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card.course-card {
+        flex-basis: calc(50% - 20px);
+    }
+}

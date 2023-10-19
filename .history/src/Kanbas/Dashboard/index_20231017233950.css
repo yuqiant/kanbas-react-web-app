@@ -1,0 +1,27 @@
+.d-flex.flex-row.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+
+
+.card {
+    flex-basis: calc(25% - 20px);
+
+    margin: 10px;
+}
+
+
+
+@media (max-width: 992px) {
+    .card {
+        flex-basis: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-basis: 50%;
+    }
+}

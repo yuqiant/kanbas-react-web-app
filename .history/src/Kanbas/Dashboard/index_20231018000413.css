@@ -1,0 +1,34 @@
+.d-flex.flex-row.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* .course-card {
+    width: 270px;
+    margin: 0 30px 40px 0;
+} */
+
+.card {
+    width: 270px;
+    margin: 0 30px 40px 0;
+    flex-basis: calc(25% - 20px);
+}
+
+@media (max-width: 1200px) {
+    .card {
+        flex-basis: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        flex-basis: calc(100% - 20px);
+    }
+}

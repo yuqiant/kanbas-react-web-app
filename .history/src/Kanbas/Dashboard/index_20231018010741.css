@@ -1,0 +1,61 @@
+.container {
+    min-width: 320px;
+    /* 设置容器的最小宽度，根据需要调整 */
+}
+
+.course-card {
+    width: 270px;
+    margin: 0 30px 40px 0;
+}
+
+
+.d-flex.flex-row.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* .card {
+    flex-basis: calc(25% - 20px);
+
+    margin: 10px;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        flex-basis: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        flex-basis: calc(100% - 20px);
+    }
+} */
+
+.card.course-card {
+    flex-basis: calc(25% - 20px);
+
+    margin: 10px;
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .card.course-card {
+        flex-basis: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card.course-card {
+        flex-basis: calc(50% - 20px);
+    }
+}
