@@ -15,11 +15,10 @@ import ModuleList from "./Modules/ModuleList";
 
 
 function Courses({ courses }) {
-    // 
     const { courseId } = useParams();
     const { pathname } = useLocation();
-    const [empty, kanbas, courseSeg, id, screen, assignmentId] = pathname.split("/");
-    const course = courses.find((course) => course._id === courseId);
+    const [empty, kanbas, courses, id, screen, assignmentId] = pathname.split("/");
+    const course = db.courses.find((course) => course._id === courseId);
 
     const separatorStyle = {
         color: "gray",

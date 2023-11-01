@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import { BiPlus, BiDotsVertical, BiCheckCircle } from "react-icons/bi";
-import { useSelector, useDispatch } from "react-redux";
-import {
-    addModule,
-    deleteModule,
-    updateModule,
-    setModule,
-} from "./modulesReducer";
+
 
 function ModuleList() {
     const { courseId } = useParams();
@@ -22,32 +16,6 @@ function ModuleList() {
         description: "New Description",
         course: courseId,
     });
-    const addModule = (module) => {
-        setModules([
-            { ...module, _id: new Date().getTime().toString() },
-            ...modules,
-        ]);
-    };
-    const deleteModule = (moduleId) => {
-        setModules(modules.filter(
-            (module) => module._id !== moduleId));
-    };
-    const updateModule = () => {
-        setModules(
-            modules.map((m) => {
-                if (m._id === module._id) {
-                    return module;
-                } else {
-                    return m;
-                }
-            })
-        );
-    }
-    const modulesCurr = useSelector((state) => state.modulesReducer.modules);
-    const moduleCurr = useSelector((state) => state.modulesReducer.module);
-    const dispatch = useDispatch();
-
-
 
 
 
@@ -85,55 +53,33 @@ function ModuleList() {
 
 
             <ul className="list-group">
-                <li className="list-group-item">
-
-                    <input
-                        value={module.name}
-                        onChange={(e) =>
-                            dispatch(setModule({ ...module, name: e.target.value }))
-                        } />
-                    <button
-                        onClick={() => dispatch(updateModule(module))}>
-                        Update
-                    </button>
-
-                    <button
-                        onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
-                        Add
-                    </button>
-                    <br />
-                    <textarea
-                        value={module.description}
-                        onChange={(e) =>
-                            dispatch(setModule({ ...module, description: e.target.value }))
-                        } />
-
-                </li>
+                {/* <li className="list-group-item"> */}
+                <button>Add</button>
+                <input value={module.name}
+                    onChange={(e) => setModule({
+                        ...module, name: e.target.value
+                    })}
+                />
+                <textarea value={module.description}
+                    onChange={(e) => setModule({
+                        ...module, description: e.target.value
+                    })}
+                />
+            </li>
 
 
-                {
-                    modules
-                        .filter((module) => module.course === courseId)
-                        .map((module, index) => (
-                            // <li key={index} className="list-group-item">
-                            <li key={index} className="list-group-item list-group-item-secondary" style={{ marginBottom: "40px" }
+            {
+                modules
+                    .filter((module) => module.course === courseId)
+                    .map((module, index) => (
+                        // <li key={index} className="list-group-item">
+                        <li key={index} className="list-group-item list-group-item-secondary" style={{ marginBottom: "40px" }
 
-                            }>
+                        }>
+                            <h4>{module.name}</h4>
 
-                                <button
-                                    onClick={() => dispatch(setModule(module))}>
-                                    Edit
-                                </button>
-
-                                <button
-                                    onClick={() => dispatch(deleteModule(module._id))}>
-                                    Delete
-                                </button>
-
-                                <h4>{module.name}</h4>
-
-                                <p>{module.description}</p>
-                                {/* <div className="list-group-item">
+                            <p>{module.description}</p>
+                            {/* <div className="list-group-item">
                                     {
                                         module.lessons && (
                                             <ul className="list-group">
@@ -149,11 +95,11 @@ function ModuleList() {
                                         )
                                     }
                                 </div> */}
-                            </li>
+                        </li>
 
-                        ))
-                }
-            </ul>
+                    ))
+            }
+        </ul>
 
         </div >
     );

@@ -10,6 +10,8 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades"; import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import ModuleList from "./Modules/ModuleList";
+import store from "./store";
+import { Provider } from "react-redux";
 
 
 

@@ -126,7 +126,7 @@ function ModuleList() {
                                 </button>
 
                                 <button
-                                    onClick={() => dispatch(deleteModule(module._id))}>
+                                    onClick={() => deleteModule(module._id)}>
                                     Delete
                                 </button>
 

@@ -102,11 +102,11 @@ function ModuleList() {
                         Add
                     </button>
                     <br />
-                    <textarea
-                        value={module.description}
-                        onChange={(e) =>
-                            dispatch(setModule({ ...module, description: e.target.value }))
-                        } />
+                    <textarea value={module.description}
+                        onChange={(e) => setModule({
+                            ...module, description: e.target.value
+                        })}
+                    />
 
                 </li>
 
@@ -121,12 +121,12 @@ function ModuleList() {
                             }>
 
                                 <button
-                                    onClick={() => dispatch(setModule(module))}>
+                                    onClick={(event) => { setModule(module); }}>
                                     Edit
                                 </button>
 
                                 <button
-                                    onClick={() => dispatch(deleteModule(module._id))}>
+                                    onClick={() => deleteModule(module._id)}>
                                     Delete
                                 </button>
 
