@@ -248,7 +248,7 @@ function AssignmentEditor() {
                         value={editedUntil}
                         className="form-control mb-2"
                         onChange={(e) => setEditedUntil(e.target.value)}
-                        style={{ width: "50%" }}
+                        style={{ width: "100%" }}
                     />
                 </div>
             </div>

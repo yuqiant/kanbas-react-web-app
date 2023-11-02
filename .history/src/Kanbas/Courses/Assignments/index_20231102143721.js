@@ -60,7 +60,7 @@ function Assignments() {
                 {/* <div class="float-sm-end"> */}
                 <div class="btn-group" style={{ marginRight: '-5px' }}>
                     <button class="btn btn-light btn-sm"><BiPlus />Group</button>
-                    <button class="btn btn-danger btn-sm" onClick={handleAddAssignment}><BiPlus />Assignment</button>
+                    <button class="btn btn-danger btn-sm"><BiPlus />Assignment</button>
                     <button class="btn btn-light btn-sm"><BiDotsVertical /></button>
 
                 </div>
@@ -117,16 +117,17 @@ function Assignments() {
 
 
             </div>
-            {deleteAssignmentId && (
-                <div className="delete-confirmation-dialog">
-                    <p>Are you sure you want to remove this assignment?</p>
-                    <button className="btn btn-secondary" onClick={handleConfirmDelete}>Yes</button>
-                    <button className="btn btn-secondary" onClick={handleCancelDelete}>No</button>
-                </div>
-            )}
 
         </div >
-
+           {
+        deleteAssignmentId && (
+            <div className="delete-confirmation-dialog">
+                <p>Are you sure you want to remove this assignment?</p>
+                <button className="btn btn-secondary" onClick={handleConfirmDelete}>Yes</button>
+                <button className="btn btn-secondary" onClick={handleCancelDelete}>No</button>
+            </div>
+        )
+    }
 
     );
 }

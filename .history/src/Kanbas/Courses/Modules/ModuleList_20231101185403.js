@@ -12,7 +12,7 @@ import {
 
 function ModuleList() {
     const { courseId } = useParams();
-    // const [modules, setModules] = useState(db.modules);
+    const [modules, setModules] = useState(db.modules);
     // const modules = db.modules;
     const buttonGroupStyle = {
         marginRight: '-5px',
@@ -43,8 +43,8 @@ function ModuleList() {
     //         })
     //     );
     // }
-    const modules = useSelector((state) => state.modulesReducer.modules);
-    const module = useSelector((state) => state.modulesReducer.module);
+    const modulesCurr = useSelector((state) => state.modulesReducer.modules);
+    const moduleCurr = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
 
 

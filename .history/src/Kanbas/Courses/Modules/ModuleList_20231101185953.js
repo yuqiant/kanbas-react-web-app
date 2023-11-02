@@ -17,11 +17,11 @@ function ModuleList() {
     const buttonGroupStyle = {
         marginRight: '-5px',
     };
-    // const [module, setModule] = useState({
-    //     name: "New Module",
-    //     description: "New Description",
-    //     course: courseId,
-    // });
+    const [module, setModule] = useState({
+        name: "New Module",
+        description: "New Description",
+        course: courseId,
+    });
     // const addModule = (module) => {
     //     setModules([
     //         { ...module, _id: new Date().getTime().toString() },
@@ -43,8 +43,8 @@ function ModuleList() {
     //         })
     //     );
     // }
-    const modules = useSelector((state) => state.modulesReducer.modules);
-    const module = useSelector((state) => state.modulesReducer.module);
+    const modulesCurr = useSelector((state) => state.modulesReducer.modules);
+    const moduleCurr = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
 
 

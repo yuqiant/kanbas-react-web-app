@@ -255,7 +255,7 @@ function AssignmentEditor() {
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <Link
                     to={`/Kanbas/Courses/${courseId}/Assignments`}
-                    className="btn btn-secondary mr-2"
+                    // className="btn btn-secondary mr-2"
                     style={{ color: "lightgray" }}
                 >
                     Cancel

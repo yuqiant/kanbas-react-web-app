@@ -206,7 +206,7 @@ function AssignmentEditor() {
                 className="form-control mb-2"
                 onChange={(e) => setEditedDescription(e.target.value)}
             />
-            Points<br />
+            Points (out of 100)<br />
             <input
                 type="number"
                 value={editedPoints}
@@ -218,37 +218,37 @@ function AssignmentEditor() {
             Assign Date
             <br />
             <br />
-            <div >
-                <div >
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <div style={{ flex: 1 }}>
                     Due Date<br />
                     <input
                         type="date"
                         value={editedDueDate}
                         className="form-control mb-2"
                         onChange={(e) => setEditedDueDate(e.target.value)}
-                        style={{ width: "50%" }}
+                        style={{ width: "100%" }}
                     />
                 </div>
             </div>
-            <div>
-                <div >
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <div style={{ flex: 0.5 }}>
                     Available From<br />
                     <input
                         type="date"
                         value={editedAvailableFrom}
                         className="form-control mb-2"
                         onChange={(e) => setEditedAvailableFrom(e.target.value)}
-                        style={{ width: "50%" }}
+                        style={{ width: "100%" }}
                     />
                 </div>
-                <div >
+                <div style={{ flex: 0.5 }}>
                     Until<br />
                     <input
                         type="date"
                         value={editedUntil}
                         className="form-control mb-2"
                         onChange={(e) => setEditedUntil(e.target.value)}
-                        style={{ width: "50%" }}
+                        style={{ width: "100%" }}
                     />
                 </div>
             </div>

@@ -42,9 +42,6 @@ function Assignments() {
             setDeleteAssignmentId(null);
         }
     };
-    const handleCancelDelete = () => {
-        setDeleteAssignmentId(null);
-    };
 
 
 
@@ -60,7 +57,7 @@ function Assignments() {
                 {/* <div class="float-sm-end"> */}
                 <div class="btn-group" style={{ marginRight: '-5px' }}>
                     <button class="btn btn-light btn-sm"><BiPlus />Group</button>
-                    <button class="btn btn-danger btn-sm" onClick={handleAddAssignment}><BiPlus />Assignment</button>
+                    <button class="btn btn-danger btn-sm"><BiPlus />Assignment</button>
                     <button class="btn btn-light btn-sm"><BiDotsVertical /></button>
 
                 </div>
@@ -88,13 +85,14 @@ function Assignments() {
                             // </Link>
                             <li className="list-group-item" key={assignment._id}>
                                 <div className="flex-container">
-                                    {/* <i className="far fa-list-alt" style={{ color: "#00b900", marginRight: "20px" }}></i> */}
+                                    <i className="far fa-list-alt" style={{ color: "#00b900", marginRight: "20px" }}></i>
                                     <div style={{ flex: 1 }}>
                                         <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{ color: "black" }}>
                                             <b>{assignment.title}</b>
                                         </Link>
                                         <br />
-
+                                        <span style={{ fontSize: "10px" }}>|&nbsp;&nbsp; <b>Due</b>&nbsp;&nbsp;{assignment.due}</span>
+                                        <span style={{ fontSize: "10px" }}>&nbsp;&nbsp;|&nbsp;&nbsp;{assignment.points}pts</span>
                                     </div>
                                     <div>
                                         <button
@@ -117,16 +115,7 @@ function Assignments() {
 
 
             </div>
-            {deleteAssignmentId && (
-                <div className="delete-confirmation-dialog">
-                    <p>Are you sure you want to remove this assignment?</p>
-                    <button className="btn btn-secondary" onClick={handleConfirmDelete}>Yes</button>
-                    <button className="btn btn-secondary" onClick={handleCancelDelete}>No</button>
-                </div>
-            )}
-
         </div >
-
 
     );
 }

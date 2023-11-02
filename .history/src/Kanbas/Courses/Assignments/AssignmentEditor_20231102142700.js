@@ -226,7 +226,7 @@ function AssignmentEditor() {
                         value={editedDueDate}
                         className="form-control mb-2"
                         onChange={(e) => setEditedDueDate(e.target.value)}
-                        style={{ width: "50%" }}
+                        style={{ width: "100%" }}
                     />
                 </div>
             </div>
@@ -238,7 +238,7 @@ function AssignmentEditor() {
                         value={editedAvailableFrom}
                         className="form-control mb-2"
                         onChange={(e) => setEditedAvailableFrom(e.target.value)}
-                        style={{ width: "50%" }}
+                        style={{ width: "100%" }}
                     />
                 </div>
                 <div >
@@ -248,7 +248,7 @@ function AssignmentEditor() {
                         value={editedUntil}
                         className="form-control mb-2"
                         onChange={(e) => setEditedUntil(e.target.value)}
-                        style={{ width: "50%" }}
+                        style={{ width: "100%" }}
                     />
                 </div>
             </div>

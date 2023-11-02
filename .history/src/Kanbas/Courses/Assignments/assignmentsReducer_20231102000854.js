@@ -4,11 +4,11 @@ import db from "../../Database";
 const initialState = {
     assignments: db.assignments,
     assignment: {
-        title: "New Assignment",
+        title: "New Assignment 123",
         description: "New Description",
-        dueDate: "",
-        availableFromDate: "",
-        availableUntilDate: "",
+        dueDate: "2023-01-01",
+        availableFromDate: "2023-01-01",
+        availableUntilDate: "2023-02-01",
     },
 };
 

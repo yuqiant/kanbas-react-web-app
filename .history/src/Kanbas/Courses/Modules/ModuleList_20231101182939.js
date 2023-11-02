@@ -12,39 +12,39 @@ import {
 
 function ModuleList() {
     const { courseId } = useParams();
-    // const [modules, setModules] = useState(db.modules);
+    const [modules, setModules] = useState(db.modules);
     // const modules = db.modules;
     const buttonGroupStyle = {
         marginRight: '-5px',
     };
-    // const [module, setModule] = useState({
-    //     name: "New Module",
-    //     description: "New Description",
-    //     course: courseId,
-    // });
-    // const addModule = (module) => {
-    //     setModules([
-    //         { ...module, _id: new Date().getTime().toString() },
-    //         ...modules,
-    //     ]);
-    // };
-    // const deleteModule = (moduleId) => {
-    //     setModules(modules.filter(
-    //         (module) => module._id !== moduleId));
-    // };
-    // const updateModule = () => {
-    //     setModules(
-    //         modules.map((m) => {
-    //             if (m._id === module._id) {
-    //                 return module;
-    //             } else {
-    //                 return m;
-    //             }
-    //         })
-    //     );
-    // }
-    const modules = useSelector((state) => state.modulesReducer.modules);
-    const module = useSelector((state) => state.modulesReducer.module);
+    const [module, setModule] = useState({
+        name: "New Module",
+        description: "New Description",
+        course: courseId,
+    });
+    const addModule = (module) => {
+        setModules([
+            { ...module, _id: new Date().getTime().toString() },
+            ...modules,
+        ]);
+    };
+    const deleteModule = (moduleId) => {
+        setModules(modules.filter(
+            (module) => module._id !== moduleId));
+    };
+    const updateModule = () => {
+        setModules(
+            modules.map((m) => {
+                if (m._id === module._id) {
+                    return module;
+                } else {
+                    return m;
+                }
+            })
+        );
+    }
+    const modulesCurr = useSelector((state) => state.modulesReducer.modules);
+    const moduleCurr = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
 
 
@@ -124,12 +124,18 @@ function ModuleList() {
                                     onClick={() => dispatch(setModule(module))}>
                                     Edit
                                 </button>
-
+                                {/* 
                                 <button
                                     onClick={() => dispatch(deleteModule(module._id))}>
                                     Delete
+                                </button> */}
+                                <button
+                                    onClick={() => {
+                                        console.log("Deleting module with ID:", module._id);
+                                        dispatch(deleteModule(module._id));
+                                    }}>
+                                    Delete
                                 </button>
-
 
                                 <h4>{module.name}</h4>
 

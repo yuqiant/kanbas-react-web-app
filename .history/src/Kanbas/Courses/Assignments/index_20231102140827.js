@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import "./index.css";
 import { BiPlus, BiCheckCircle, BiDotsVertical } from "react-icons/bi";
+import { useSelector } from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
 import { setAssignment, deleteAssignment } from './assignmentsReducer';
 function Assignments() {
@@ -42,9 +43,6 @@ function Assignments() {
             setDeleteAssignmentId(null);
         }
     };
-    const handleCancelDelete = () => {
-        setDeleteAssignmentId(null);
-    };
 
 
 
@@ -60,7 +58,7 @@ function Assignments() {
                 {/* <div class="float-sm-end"> */}
                 <div class="btn-group" style={{ marginRight: '-5px' }}>
                     <button class="btn btn-light btn-sm"><BiPlus />Group</button>
-                    <button class="btn btn-danger btn-sm" onClick={handleAddAssignment}><BiPlus />Assignment</button>
+                    <button class="btn btn-danger btn-sm"><BiPlus />Assignment</button>
                     <button class="btn btn-light btn-sm"><BiDotsVertical /></button>
 
                 </div>
@@ -79,37 +77,13 @@ function Assignments() {
                     </a>
                     <div className="list-group">
                         {courseAssignments.map((assignment) => (
-                            // <Link
-                            //     key={assignment._id}
-                            //     to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-                            //     className="list-group-item">
-                            //     {assignment.title}
+                            <Link
+                                key={assignment._id}
+                                to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                                className="list-group-item">
+                                {assignment.title}
 
-                            // </Link>
-                            <li className="list-group-item" key={assignment._id}>
-                                <div className="flex-container">
-                                    {/* <i className="far fa-list-alt" style={{ color: "#00b900", marginRight: "20px" }}></i> */}
-                                    <div style={{ flex: 1 }}>
-                                        <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{ color: "black" }}>
-                                            <b>{assignment.title}</b>
-                                        </Link>
-                                        <br />
-
-                                    </div>
-                                    <div>
-                                        <button
-                                            className="btn btn-secondary" style={{ height: "35px", marginRight: '5px' }}
-                                            onClick={() => handleDeleteAssignment(assignment._id)}
-                                        >
-                                            Delete
-                                        </button>
-
-                                    </div>
-                                </div>
-                            </li>
-
-
-
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -117,16 +91,7 @@ function Assignments() {
 
 
             </div>
-            {deleteAssignmentId && (
-                <div className="delete-confirmation-dialog">
-                    <p>Are you sure you want to remove this assignment?</p>
-                    <button className="btn btn-secondary" onClick={handleConfirmDelete}>Yes</button>
-                    <button className="btn btn-secondary" onClick={handleCancelDelete}>No</button>
-                </div>
-            )}
-
         </div >
-
 
     );
 }
