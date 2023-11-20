@@ -19,7 +19,7 @@ import axios from "axios";
 function Courses() {
     // 
     const { courseId } = useParams();
-
+    console.log("Params:", courseId);
     console.log("Course ID:", typeof courseId);
     const { pathname } = useLocation();
 
@@ -33,6 +33,7 @@ function Courses() {
             `${URL}/${courseId}`
         );
         setCourse(response.data);
+        // console.log("Response data:", typeof response.data);
 
 
     };

@@ -30,7 +30,7 @@ function Courses() {
     const findCourseById = async (courseId) => {
         console.log("Fetching course for courseId:", typeof courseId);
         const response = await axios.get(
-            `${URL}/${courseId}`
+            `${URL}/${courseId.$oid}`
         );
         setCourse(response.data);
 

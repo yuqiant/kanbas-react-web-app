@@ -54,7 +54,7 @@ function Courses() {
         <div>
 
             {/* <h1>Courses {course.name} / {screen}</h1> */}
-            <Link to={`/Kanbas/Courses/${courseId}`} style={{ color: "red", marginLeft: "10px" }}>{course.name}</Link>
+            <Link to={`/Kanbas/Courses/${courseId.$oid}`} style={{ color: "red", marginLeft: "10px" }}>{course.name}</Link>
             <span style={separatorStyle}> &gt; </span>
             <Link to={pathname} style={{ color: "black" }}>{screen}</Link>
 

@@ -62,41 +62,19 @@ function Kanbas() {
             console.error("Error deleting course:", error);
         }
     };
-
-    // const updateCourse = async () => {
-
-    //     // const response = await axios.put(`${URL}/${course._id}`, course);
-    //     // setCourses(courses.map((c) => {
-    //     //     if (c._id === course._id) {
-    //     //         return response.data; // Use updated data from the server
-    //     //     }
-    //     //     return c;
-    //     // }));
-    //     // // setCourse(response.data);
-    //     const response = await axios.put(`${URL}/${course._id}`, course);
-    //     const updatedCourse = response.data; // Updated course data from server
-    //     console.log("Updated course:", updatedCourse); // Check updated course data
-    //     setCourses(prevCourses => {
-    //         return prevCourses.map(c => (c._id === updatedCourse._id ? updatedCourse : c));
-    //     });
-    //     // Optionally, update the currently edited course if necessary
-    //     setCourse(updatedCourse);
-    // };
-
     const updateCourse = async () => {
-        const response = await axios.put(
-            `${URL}/${course._id}`,
-            course
+
+        const response = await axios.put(`${URL}/${course._id}`, course);
+        setCourses(courses.map((c) => {
+            if (c._id === course._id) {
+                return response.data;
+            }
+            return c;
+        })
         );
-        setCourses(
-            courses.map((c) => {
-                if (c._id === course._id) {
-                    return response.data;
-                }
-                return c;
-            })
-        );
-        setCourse({ name: "" });
+        // setCourse({ name: "" });
+
+
     };
 
 

@@ -92,11 +92,11 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                 <div className="row row-cols-4">
                     {courses.map((course) => (
                         // <div className="col" key={course._id}>
-                        <div className="card course-card" key={course._id}>
+                        <div className="card course-card" key={course._id.$oid}>
                             <img src={blueImg} className="card-img-top" alt={`Course ${course.number}`} />
                             <div className="card-body">
                                 <h5 className="card-title">
-                                    <Link to={`/Kanbas/Courses/${course._id}`}>
+                                    <Link to={`/Kanbas/Courses/${course._id.$oid}`}>
                                         {course.number + " " + course.name}
                                     </Link>
 
@@ -116,7 +116,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                                 <button
                                     onClick={(event) => {
                                         event.preventDefault();
-                                        deleteCourse(course._id);
+                                        deleteCourse(course._id.$oid);
                                     }}>
                                     Delete
                                 </button>

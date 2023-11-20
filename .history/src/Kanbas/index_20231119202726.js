@@ -45,82 +45,31 @@ function Kanbas() {
     // const deleteCourse = (courseId) => {
     //     setCourses(courses.filter((course) => course._id !== courseId));
     // };
-    // const deleteCourse = async (courseId) => {
 
-    //     await axios.delete(
-    //         `${URL}/${courseId}`
-    //     );
-    //     setCourses(courses.filter((course) => course._id !== courseId));
-    //     console.log(courses);
-
-    // };
-    const deleteCourse = async (courseId) => {
-        try {
-            await axios.delete(`${URL}/${courseId}`);
-            setCourses(courses.filter((course) => course._id !== courseId));
-        } catch (error) {
-            console.error("Error deleting course:", error);
-        }
-    };
-
-    // const updateCourse = async () => {
-
-    //     // const response = await axios.put(`${URL}/${course._id}`, course);
-    //     // setCourses(courses.map((c) => {
-    //     //     if (c._id === course._id) {
-    //     //         return response.data; // Use updated data from the server
-    //     //     }
-    //     //     return c;
-    //     // }));
-    //     // // setCourse(response.data);
-    //     const response = await axios.put(`${URL}/${course._id}`, course);
-    //     const updatedCourse = response.data; // Updated course data from server
-    //     console.log("Updated course:", updatedCourse); // Check updated course data
-    //     setCourses(prevCourses => {
-    //         return prevCourses.map(c => (c._id === updatedCourse._id ? updatedCourse : c));
-    //     });
-    //     // Optionally, update the currently edited course if necessary
-    //     setCourse(updatedCourse);
-    // };
-
-    const updateCourse = async () => {
-        const response = await axios.put(
-            `${URL}/${course._id}`,
-            course
+    try {
+        await axios.delete(
+            `${URL}/${course._id}`
         );
+        setCourses(courses.filter(
+            (c) => c._id !== course._id
+        ));
+    } catch (error) {
+        // 处理删除失败的情况
+        console.error("删除课程时出错：", error);
+    }
+
+
+    const updateCourse = () => {
         setCourses(
             courses.map((c) => {
                 if (c._id === course._id) {
-                    return response.data;
+                    return course;
+                } else {
+                    return c;
                 }
-                return c;
             })
         );
-        setCourse({ name: "" });
     };
-
-
-
-
-
-
-
-
-
-
-
-
-    // const updateCourse = () => {
-    //     setCourses(
-    //         courses.map((c) => {
-    //             if (c._id === course._id) {
-    //                 return course;
-    //             } else {
-    //                 return c;
-    //             }
-    //         })
-    //     );
-    // };
 
     return (
         <Provider store={store}>

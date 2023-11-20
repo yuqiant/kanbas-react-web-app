@@ -37,12 +37,6 @@ function ModuleList() {
         });
     };
 
-    const handleUpdateModule = async () => {
-        const status = await client.updateModule(module);
-        dispatch(updateModule(module));
-    };
-
-
 
 
     // const [module, setModule] = useState({

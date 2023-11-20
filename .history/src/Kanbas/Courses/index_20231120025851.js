@@ -19,7 +19,6 @@ import axios from "axios";
 function Courses() {
     // 
     const { courseId } = useParams();
-
     console.log("Course ID:", typeof courseId);
     const { pathname } = useLocation();
 

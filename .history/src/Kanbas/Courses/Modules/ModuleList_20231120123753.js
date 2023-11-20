@@ -37,12 +37,6 @@ function ModuleList() {
         });
     };
 
-    const handleUpdateModule = async () => {
-        const status = await client.updateModule(module);
-        dispatch(updateModule(module));
-    };
-
-
 
 
     // const [module, setModule] = useState({
@@ -155,9 +149,7 @@ function ModuleList() {
                                 </button>
 
                                 <button
-                                    // onClick={() => dispatch(deleteModule(module._id))}>
-                                    onClick={() => handleDeleteModule(module._id)}
-                                >
+                                    onClick={() => dispatch(deleteModule(module._id))}>
                                     Delete
                                 </button>
 

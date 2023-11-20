@@ -30,7 +30,7 @@ function Courses() {
     const findCourseById = async (courseId) => {
         console.log("Fetching course for courseId:", typeof courseId);
         const response = await axios.get(
-            `${URL}/${courseId}`
+            `${URL}/${courseId.$oid}`
         );
         setCourse(response.data);
 
@@ -46,7 +46,7 @@ function Courses() {
 
     useEffect(() => {
         console.log("courseId from useParams:", typeof courseId);
-        findCourseById(courseId);
+        findCourseById(courseId.$oid);
     }, [courseId]);
 
 
@@ -54,7 +54,7 @@ function Courses() {
         <div>
 
             {/* <h1>Courses {course.name} / {screen}</h1> */}
-            <Link to={`/Kanbas/Courses/${courseId}`} style={{ color: "red", marginLeft: "10px" }}>{course.name}</Link>
+            <Link to={`/Kanbas/Courses/${courseId.$oid}`} style={{ color: "red", marginLeft: "10px" }}>{course.name}</Link>
             <span style={separatorStyle}> &gt; </span>
             <Link to={pathname} style={{ color: "black" }}>{screen}</Link>
 

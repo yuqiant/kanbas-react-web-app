@@ -107,8 +107,8 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                                 <button
                                     onClick={(event) => {
                                         event.preventDefault();
-                                        setCourse(course);
-                                        // setCourse(prevCourse => ({ ...prevCourse, ...course }));
+                                        // setCourse(course);
+                                        setCourse(prevCourse => ({ ...prevCourse, ...course }));
                                     }}>
                                     Edit
                                 </button>

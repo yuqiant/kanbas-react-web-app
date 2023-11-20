@@ -19,24 +19,17 @@ import axios from "axios";
 function Courses() {
     // 
     const { courseId } = useParams();
-
-    console.log("Course ID:", typeof courseId);
     const { pathname } = useLocation();
-
     const [empty, kanbas, courseSeg, id, screen, assignmentId] = pathname.split("/");
     // const course = courses.find((course) => course._id === courseId);
-    const URL = "http://localhost:4000/api/courses";
+    const URL = "http://localhost:3003/api/courses";
     const [course, setCourse] = useState({});
     const findCourseById = async (courseId) => {
-        console.log("Fetching course for courseId:", typeof courseId);
         const response = await axios.get(
             `${URL}/${courseId}`
         );
         setCourse(response.data);
-
-
     };
-
 
 
     const separatorStyle = {
@@ -45,7 +38,6 @@ function Courses() {
     };
 
     useEffect(() => {
-        console.log("courseId from useParams:", typeof courseId);
         findCourseById(courseId);
     }, [courseId]);
 
@@ -54,7 +46,7 @@ function Courses() {
         <div>
 
             {/* <h1>Courses {course.name} / {screen}</h1> */}
-            <Link to={`/Kanbas/Courses/${courseId}`} style={{ color: "red", marginLeft: "10px" }}>{course.name}</Link>
+            <Link to={`/Kanbas/Courses/${courseId.toString()}`} style={{ color: "red", marginLeft: "10px" }}>{course.name}</Link>
             <span style={separatorStyle}> &gt; </span>
             <Link to={pathname} style={{ color: "black" }}>{screen}</Link>
 

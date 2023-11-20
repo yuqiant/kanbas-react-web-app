@@ -19,8 +19,8 @@ import axios from "axios";
 function Courses() {
     // 
     const { courseId } = useParams();
-
-    console.log("Course ID:", typeof courseId);
+    console.log("Params:", courseId);
+    console.log("Params object:", typeof courseId);
     const { pathname } = useLocation();
 
     const [empty, kanbas, courseSeg, id, screen, assignmentId] = pathname.split("/");
@@ -33,6 +33,7 @@ function Courses() {
             `${URL}/${courseId}`
         );
         setCourse(response.data);
+        // console.log("Response data:", typeof response.data);
 
 
     };
@@ -45,7 +46,7 @@ function Courses() {
     };
 
     useEffect(() => {
-        console.log("courseId from useParams:", typeof courseId);
+        console.log("courseId from useParams:", courseId);
         findCourseById(courseId);
     }, [courseId]);
 

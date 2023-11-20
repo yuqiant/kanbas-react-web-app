@@ -18,8 +18,11 @@ import axios from "axios";
 
 function Courses() {
     // 
-    const { courseId } = useParams();
+    const { objectId } = useParams();
+    const oId = objectId["$oid"];
 
+    // 转换成普通的字符串格式
+    const courseId = oId.toString();
     console.log("Course ID:", typeof courseId);
     const { pathname } = useLocation();
 

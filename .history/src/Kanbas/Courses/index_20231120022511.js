@@ -19,21 +19,23 @@ import axios from "axios";
 function Courses() {
     // 
     const { courseId } = useParams();
-
-    console.log("Course ID:", typeof courseId);
     const { pathname } = useLocation();
-
     const [empty, kanbas, courseSeg, id, screen, assignmentId] = pathname.split("/");
     // const course = courses.find((course) => course._id === courseId);
     const URL = "http://localhost:4000/api/courses";
     const [course, setCourse] = useState({});
     const findCourseById = async (courseId) => {
-        console.log("Fetching course for courseId:", typeof courseId);
-        const response = await axios.get(
-            `${URL}/${courseId}`
-        );
-        setCourse(response.data);
-
+        // const response = await axios.get(
+        //     `${URL}/${courseId}`
+        // );
+        // setCourse(response.data);
+        try {
+            const response = await axios.get(`${BASE_URL}/${String(courseId)}`);
+            setCourse(response.data);
+        } catch (error) {
+            console.error("Error fetching course:", error);
+            // 处理错误或者进一步调试
+        }
 
     };
 
@@ -45,7 +47,6 @@ function Courses() {
     };
 
     useEffect(() => {
-        console.log("courseId from useParams:", typeof courseId);
         findCourseById(courseId);
     }, [courseId]);
 
