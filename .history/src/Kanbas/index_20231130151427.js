@@ -139,6 +139,7 @@ function Kanbas() {
                             deleteCourse={deleteCourse}
                             updateCourse={updateCourse} />
                         } />
+                        <Route path="/signin" element={<Signin />} />
                         <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
                         <Route path="Calendar" element={<h1>Calendar</h1>} />
                     </Routes>

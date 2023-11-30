@@ -8,7 +8,6 @@ import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
-import Signin from "../users/signin";
 
 function Kanbas() {
     const [courses, setCourses] = useState(db.courses);
@@ -139,6 +138,7 @@ function Kanbas() {
                             deleteCourse={deleteCourse}
                             updateCourse={updateCourse} />
                         } />
+                        <Route path="/signin" element={<Signin />} />
                         <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
                         <Route path="Calendar" element={<h1>Calendar</h1>} />
                     </Routes>
