@@ -64,9 +64,6 @@ function Account() {
                     <button onClick={save}>
                         Save
                     </button>
-                    <button onClick={signout}>
-                        Signout
-                    </button>
                     <Link to="/project/admin/users" className="btn btn-warning w-100">
                         Users
                     </Link>

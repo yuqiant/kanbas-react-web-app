@@ -1,7 +1,7 @@
 import Signin from "../users/signin";
 import Account from "../users/account";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Signup from "../users/signup";
+import { Link } from 'react-router-dom';
 
 import Nav from "./nav";
 import UserTable from "../users/tables";
@@ -17,7 +17,6 @@ function Project() {
                     <Route path="/signin" element={<Signin />} />
                     <Route path="/account" element={<Account />} />
                     <Route path="/admin/users" element={<UserTable />} />
-                    <Route path="/signup" element={<Signup />} />
                 </Routes>
             </div>
         </div>

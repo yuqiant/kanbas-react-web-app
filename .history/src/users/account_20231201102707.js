@@ -1,8 +1,6 @@
 import * as client from "./client";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from 'react-router-dom';
-
 function Account() {
     const [account, setAccount] = useState(null);
     const navigate = useNavigate();
@@ -13,11 +11,6 @@ function Account() {
     const save = async () => {
         await client.updateUser(account);
     };
-    const signout = async () => {
-        await client.signout();
-        navigate("/project/signin");
-    };
-
 
     useEffect(() => {
         fetchAccount();
@@ -63,9 +56,6 @@ function Account() {
                     </select>
                     <button onClick={save}>
                         Save
-                    </button>
-                    <button onClick={signout}>
-                        Signout
                     </button>
                     <Link to="/project/admin/users" className="btn btn-warning w-100">
                         Users

@@ -17,7 +17,7 @@ function Project() {
                     <Route path="/signin" element={<Signin />} />
                     <Route path="/account" element={<Account />} />
                     <Route path="/admin/users" element={<UserTable />} />
-                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/signout" element={<Signup />} />
                 </Routes>
             </div>
         </div>
