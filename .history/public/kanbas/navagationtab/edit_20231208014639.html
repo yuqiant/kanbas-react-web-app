@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../../vendors/fontawesome-free-5.15.4-web/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@6.4.2/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="course-details.css">
+    <link rel="stylesheet" href="../coursesetting.css">
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="left-column">
+            <ul>
+                <li><i class="fa fa-user-circle fa-inverse"></i><a href="../account/account.html">Account</a> </li>
+                <li><i class="fas fa-tachometer-alt" style="color: red;"></i><a
+                        href="../dashboard/index.html">Dashboard</a></li>
+                <li><i class="fas fa-book" style="color: red;"></i><a href="../course/courseNavigation.html">Course</a>
+                </li>
+                <li><i class="fas fa-calendar" style="color: red;""></i><a href=" #">Calendar</a></li>
+                <li><i class="fas fa-inbox" style="color: red;"></i><a href="#">Inbox</a></li>
+                <li><i class="fas fa-clock" style="color: red;"></i><a href="#">History</a></li>
+                <li><i class="fas fa-desktop" style="color: red;"></i><a href="#">Studio</a></li>
+                <li><i class="fas fa-share" style="color: red;"></i><a href="#">Commons</a></li>
+                <li><i class="fas fa-question-circle" style="color: red;"></i><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div class="right-column">
+            <div class="right-top">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../dashboard/index.html"
+                                style="color: red;">CS5610.11744.202310</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                    </ol>
+                </nav>
+                <div class="float-sm-end"> <button class="btn btn-light btn-sm">Student View</button>
+                </div><br />
+                <hr />
+
+
+            </div>
+            <div class="right-bottom">
+                <div class="right-bottom-item1">
+                    <ul>
+                        <li><a href="../home.html">Home</a></li>
+                        <li><a href="#">Modules</a></li>
+                        <li><a href="#">Piazza</a></li>
+                        <li><a href="#">Zoom Meetings</a></li>
+                        <li><a href="assignment/index.html">Assignments</a></li>
+                        <li><a href="#">Quizzes</a></li>
+                        <li><a href="../grade/grades.html">Grades</a></li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Panopto Video</a></li>
+                        <li><a href="#">Discussions</a></li>
+                        <li><a href="#">Announcements</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Rubrics</a></li>
+                        <li><a href="#">Outcomes</a></li>
+                        <li><a href="#">Collaborations</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li class="active" style="color: black;"><a href="../coursesetting.html">Settings</a></li>
+                    </ul>
+                </div>
+                <div class="right-bottom-item2">
+                    <!-- <a href="#">Course Details</a>
+                    <a href="#">Sections</a>
+                    <a class="active" href="navagationtab/edit.html">Navigation</a>
+                    <a href="#">Apps</a>
+                    <a href="#">Feature Options</a>
+                    <a href="#">Integrations</a>
+
+                    <br>
+                    <hr />
+                    <td> -->
+                    <div class="right-column">
+                        <div class="right-bottom">
+                            <div class="right-bottom-item2">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./course-details.html">Course Details</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Sections</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="black" href="#">Navigation</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Apps</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Feature Options</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Integrations</a>
+                                    </li>
+                                </ul>
+                                <br />
+                                <br />
+                                Drag and drop items to reorder them in the course navigation.<br /><br />
+                                <ul class="list-group">
+                                    <li class="list-group-item">Home</li>
+                                    <li class="list-group-item">Modules</li>
+                                    <li class="list-group-item">Piazza</li>
+                                    <li class="list-group-item">Zoom Meetings</li>
+                                    <li class="list-group-item">Assignments</li>
+                                    <li class="list-group-item">Quizzes</li>
+                                    <li class="list-group-item">Grades</li>
+                                    <li class="list-group-item">People</li>
+                                    <li class="list-group-item">Panopto Video</li>
+                                    <!-- ... and so on for other items -->
+                                </ul>
+                                Drag items here to hide them from students.<br />
+                                <small>Disabling most pages will cause students who vist those pages to be redicted
+                                    to
+                                    the
+                                    course home page.</small><br />
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        Chat<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                            disabled, won't appear in navigation</li>
+                                    <li class="list-group-item">
+                                        SCORM<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                            disabled, won't appear in navigation</li>
+                                    <li class="list-group-item">
+                                        Attendance<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                            disabled, won't appear in navigation</li>
+                                    <li class="list-group-item">Barnes and Noble
+                                        Bookstore<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page disabled, won't
+                                            appear in
+                                            navigation</li>
+                                    <li class="list-group-item">
+                                        Digication<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                            disabled, won't appear in navigation</li>
+                                    <li class="list-group-item">Top
+                                        Hat<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                            disabled, won't appear in navigation</li>
+                                    <li class="list-group-item">
+                                        Syllabus<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                            disabled, won't appear in navigation</li>
+                                    <li class="list-group-item">
+                                        Perusall<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                            disabled, won't appear in navigation</li>
+                                    <li class="list-group-item">Microsoft Teams
+                                        Meetings<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page disabled, won't
+                                            appear
+                                            in
+                                            navigation</li>
+                                    <li class="list-group-item">FACT Reporting and Photo
+                                        Roster<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page disabled, won't
+                                            appear
+                                            in
+                                            navigation</li>
+                                    <li class="list-group-item">
+                                        Syllabus<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                            disabled, won't appear in navigation</li>
+                                    <li class="list-group-item">
+                                        Perusall<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                            disabled, won't appear in navigation</li>
+                                    <li class="list-group-item">Microsoft Teams
+                                        Meetings<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page disabled, won't
+                                            appear
+                                            in
+                                            navigation</li>
+                                </ul>
+                                <div>
+                                    <button onclick="location.href='./course-details.html'">Save</button>
+                                </div>
+                                </table>
+                                </td>
+
+                            </div>
+                        </div>
+                        <div>
+                            <td>
+                                <br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                <div class="right-column">
+                                    <div class="right-bottom">
+                                        <div class="right-bottom-item2">
+                                            <ul class="nav nav-tabs">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="./course-details.html">Course Details</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Sections</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="black" href="#">Navigation</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Apps</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Feature Options</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Integrations</a>
+                                                </li>
+                                            </ul>
+                                            <br />
+                                            <br />
+                                            Drag and drop items to reorder them in the course navigation.<br /><br />
+                                            <ul class="list-group">
+                                                <li class="list-group-item">Home</li>
+                                                <li class="list-group-item">Modules</li>
+                                                <li class="list-group-item">Piazza</li>
+                                                <li class="list-group-item">Zoom Meetings</li>
+                                                <li class="list-group-item">Assignments</li>
+                                                <li class="list-group-item">Quizzes</li>
+                                                <li class="list-group-item">Grades</li>
+                                                <li class="list-group-item">People</li>
+                                                <li class="list-group-item">Panopto Video</li>
+                                                <!-- ... and so on for other items -->
+                                            </ul>
+                                            Drag items here to hide them from students.<br />
+                                            <small>Disabling most pages will cause students who vist those pages to be
+                                                redicted to
+                                                the
+                                                course home page.</small><br />
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    Chat<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                                        disabled, won't appear in navigation</li>
+                                                <li class="list-group-item">
+                                                    SCORM<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                                        disabled, won't appear in navigation</li>
+                                                <li class="list-group-item">
+                                                    Attendance<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                                        disabled, won't appear in navigation</li>
+                                                <li class="list-group-item">Barnes and Noble
+                                                    Bookstore<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page disabled,
+                                                        won't
+                                                        appear in
+                                                        navigation</li>
+                                                <li class="list-group-item">
+                                                    Digication<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                                        disabled, won't appear in navigation</li>
+                                                <li class="list-group-item">Top
+                                                    Hat<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                                        disabled, won't appear in navigation</li>
+                                                <li class="list-group-item">
+                                                    Syllabus<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                                        disabled, won't appear in navigation</li>
+                                                <li class="list-group-item">
+                                                    Perusall<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                                        disabled, won't appear in navigation</li>
+                                                <li class="list-group-item">Microsoft Teams
+                                                    Meetings<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page disabled,
+                                                        won't appear
+                                                        in
+                                                        navigation</li>
+                                                <li class="list-group-item">FACT Reporting and Photo
+                                                    Roster<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page disabled,
+                                                        won't appear
+                                                        in
+                                                        navigation</li>
+                                                <li class="list-group-item">
+                                                    Syllabus<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                                        disabled, won't appear in navigation</li>
+                                                <li class="list-group-item">
+                                                    Perusall<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page
+                                                        disabled, won't appear in navigation</li>
+                                                <li class="list-group-item">Microsoft Teams
+                                                    Meetings<br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page disabled,
+                                                        won't appear
+                                                        in
+                                                        navigation</li>
+                                            </ul>
+                                            <div>
+                                                <button onclick="location.href='./course-details.html'">Save</button>
+                                            </div>
+                                            </table>
+                            </td>
+                            </tr>
+                            </table>
+                        </div>
+                    </div>
+
+</body>
+
+</html>
